@@ -1,0 +1,21 @@
+{
+  "name": "vsc-theme",
+  "displayName": "vsc-theme",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "vsc-theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/vsc-theme-color-theme.json"
+      }
+    ]
+  }
+}
