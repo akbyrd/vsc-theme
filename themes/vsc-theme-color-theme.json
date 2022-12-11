@@ -240,7 +240,7 @@
 				"keyword.type",
 				"storage.type.built-in",
 			],
-			"settings": { "foreground": "#009688", },
+			"settings": { "foreground": "#00897B", },
 		},
 		{ // Other Keywords
 			"scope": [
@@ -278,16 +278,16 @@
 				"entity.name.operator",
 				"keyword.other.operator.overload",
 			],
-			"settings": { "foreground": "#9AE22A", },
+			"settings": { "foreground": "#64DD17", },
 		},
 		{ // Function Parameters
 			"scope": [
 				"entity.name.other.preprocessor",
-				"punctuation.vararg-ellipses",
+				"punctuation.vararg-ellipses.variable.parameter.preprocessor",
 				"variable.other.macro",
 				"variable.parameter",
 			],
-			"settings": { "foreground": "#008DA0", "fontStyle": "italic"},
+			"settings": { "foreground": "#00BCD4", "fontStyle": "italic"},
 		},
 		{ // Variables
 		"scope": [
@@ -302,22 +302,15 @@
 				"comment",
 				"punctuation.definition.comment",
 			],
-			"settings": { "foreground": "#5D7F30", },
+			"settings": { "foreground": "#33691E", },
 		},
 		{ // Macros
 			"scope": "entity.name.function.preprocessor",
-			"settings": { "foreground": "#8C66FF", },
+			"settings": { "foreground": "#7E57C2", },
 		},
 		{ // Enum Members
 			"scope": "variable.other.enummember",
-			"settings": { "foreground": "#AECF83", },
-		},
-		{ // Namespaces
-			"scope": [
-				"entity.name.namespace",
-				"entity.name.scope-resolution",
-			],
-			"settings": { "foreground": "#007C70", },
+			"settings": { "foreground": "#4CAF50", },
 		},
 		{ // Labels
 			"scope": "entity.name.label.cpp",
@@ -325,6 +318,8 @@
 		},
 		{ // Everything Else
 			"scope": [
+				"entity.name.namespace",
+				"entity.name.scope-resolution",
 				"keyword.operator.arithmetic",
 				"keyword.operator.assignment",
 				"keyword.operator.bitwise",
@@ -340,7 +335,7 @@
 				"storage.modifier.pointer",
 				"storage.modifier.reference",
 			],
-			"settings": { "foreground": "#BBBBBB", },
+			"settings": { "foreground": "#9E9E9E", },
 		},
 		{ // Find Missing Colors
 			"scope": [

@@ -54,6 +54,9 @@ struct alignas(4) FooStruct final : private FooBase
 	FooStruct() = default;
 	FooStruct(FooStruct&&) = delete;
 
+	using FooBase::FooBase;
+	using FooBase::Bar;
+
 	int x;
 	mutable int y;
 	volatile int* z;
@@ -89,7 +92,7 @@ void BarThrow() throw(int) {};
 // BUG: Variadic parameters only work if named
 template <typename, class... Us>
 constexpr inline static int
-BarKeywords(const volatile C* __restrict parameter)
+BarKeywords(const volatile int* parameter)
 noexcept(0)
 {
 	static_assert(true);
@@ -249,7 +252,7 @@ BarFunctionCalls()
 // -------------------------------------------------------------------------------------------------
 // Function Parameters
 
-void BarParameter(int parameter) { int variable; }
+void BarParameter(int parameter) { int variable = parameter; }
 
 // -------------------------------------------------------------------------------------------------
 // Comments
@@ -257,6 +260,7 @@ void BarParameter(int parameter) { int variable; }
 // Comment
 /* Block comment */
 /// Doxygen comment
+
 // -------------------------------------------------------------------------------------------------
 
 void
@@ -265,7 +269,7 @@ BarVariables()
 	int x = 0;
 	x = 0ull;
 	x = 0xff;
-	x = 0b0011;
+	x = 0b0011'0000;
 	x = (-1) + (+1);
 	x = 0 ? 0 : 0;
 
@@ -315,6 +319,7 @@ BarStructMember()
 }
 
 namespace Space { int member; }
+using namespace Space;
 enum FooEnum { Value };
 
 void

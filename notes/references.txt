@@ -8,6 +8,7 @@ https://www.apeth.com/nonblog/stories/textmatebundle.html
 https://code.visualstudio.com/api/extension-guides/color-theme
 https://code.visualstudio.com/api/working-with-extensions/publishing-extension
 
+https://m2.material.io/design/color/the-color-system.html#tools-for-picking-colors
 https://themes.vscode.one/
 https://colorsublime.github.io/
 

@@ -1,0 +1,20 @@
+#E91E63 Pink 500         - Control flow
+#00897B Teal 600         - Types
+#2196F3 Blue 500         - Keywords
+#FFC107 Amber 500        - Literals
+#FF9800 Orange 500       - Escapes
+#00BCD4 Cyan 500         - Formats
+#4CAF50 Green 500        - Enums
+#607D8B Blue Gray 500    - Labels
+#9E9E9E Gray 500         - Default
+#00BCD4 Cyan 500         - Variables
+#00BCD4 Cyan 500         - Parameters
+#7E57C2 Deep Purple 400  - Macros
+#33691E Light Green 900  - Comments
+#64DD17 Light Green A700 - Functions
+
+Alternative
+#FF9800 Orange 500       - Types (A200, A400)
+#9E9D24 Lime 800         - Literals
+
+TODO: Should strings, built-ins, and numbers have different colors?
