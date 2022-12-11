@@ -1,8 +1,12 @@
 {
-  "name": "vsc-theme",
-  "displayName": "vsc-theme",
+  "name": "akbyrd-vsc-theme",
+  "displayName": "akbyrd-vsc-theme",
   "description": "",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/akbyrd/vsc-theme"
+  },
   "engines": {
     "vscode": "^1.74.0"
   },
@@ -12,7 +16,7 @@
   "contributes": {
     "themes": [
       {
-        "label": "vsc-theme",
+        "label": "akbyrd-vsc-theme",
         "uiTheme": "vs-dark",
         "path": "./themes/vsc-theme-color-theme.json"
       }
