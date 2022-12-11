@@ -3,6 +3,7 @@
   "displayName": "akbyrd-vsc-theme",
   "description": "",
   "version": "0.0.1",
+  "publisher": "akbyrd",
   "repository": {
     "type": "git",
     "url": "https://github.com/akbyrd/vsc-theme"
