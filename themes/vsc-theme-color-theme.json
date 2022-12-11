@@ -225,18 +225,20 @@
 	"tokenColors": [
 		{ // Control Flow
 			"scope": [
-				"keyword.control",
 				"entity.other.attribute-name.pragma.preprocessor",
+				"keyword.control",
 				"punctuation.definition.directive",
 			],
 			"settings": { "foreground": "#E91E63", },
 		},
 		{ // Types
 			"scope": [
+				"entity.name.label.cs",
 				"entity.name.type",
 				"entity.name.operator.type",
+				"keyword.other.var",
+				"keyword.type",
 				"storage.type.built-in",
-				//"storage.type.primitive",
 			],
 			"settings": { "foreground": "#009688", },
 		},
@@ -272,11 +274,8 @@
 		},
 		{ // Functions
 			"scope": [
+				"entity.name.function",
 				"entity.name.operator",
-				"entity.name.function.call",
-				"entity.name.function.definition",
-				"entity.name.function.member",
-				"entity.name.function.operator",
 				"keyword.other.operator.overload",
 			],
 			"settings": { "foreground": "#9AE22A", },
@@ -284,18 +283,18 @@
 		{ // Function Parameters
 			"scope": [
 				"entity.name.other.preprocessor",
+				"punctuation.vararg-ellipses",
 				"variable.other.macro",
 				"variable.parameter",
-				"punctuation.vararg-ellipses",
-				//"meta.function.preprocessor.parameters",
 			],
 			"settings": { "foreground": "#008DA0", "fontStyle": "italic"},
 		},
 		{ // Variables
-			"scope": [
-				"variable",
-				"support.type.property-name",
-			],
+		"scope": [
+			"entity.name.variable",
+			"support.type.property-name",
+			"variable",
+		],
 			"settings": { "foreground": "#00BCD4", },
 		},
 		{ // Comments
@@ -314,11 +313,14 @@
 			"settings": { "foreground": "#AECF83", },
 		},
 		{ // Namespaces
-			"scope": "entity.name.namespace",
+			"scope": [
+				"entity.name.namespace",
+				"entity.name.scope-resolution",
+			],
 			"settings": { "foreground": "#007C70", },
 		},
 		{ // Labels
-			"scope": "entity.name.label",
+			"scope": "entity.name.label.cpp",
 			"settings": { "foreground": "#607D8B", },
 		},
 		{ // Everything Else
@@ -327,13 +329,14 @@
 				"keyword.operator.assignment",
 				"keyword.operator.bitwise",
 				"keyword.operator.comparison",
+				"keyword.operator.conditional",
+				"keyword.operator.decrement",
+				"keyword.operator.increment",
 				"keyword.operator.logical",
+				"keyword.operator.relational",
 				"keyword.operator.ternary",
 				"meta",
-				"punctuation.definition",
-				"punctuation.section",
-				"punctuation.separator",
-				"punctuation.terminator",
+				"punctuation",
 				"storage.modifier.pointer",
 				"storage.modifier.reference",
 			],
@@ -358,7 +361,9 @@
 // BUG: Can't tell the difference between throw exception specifier and control flow
 // BUG: Can't tell between overloaded new and non-overloaded new
 // BUG: "keyword.other.operator.overload" doesn't override "keyword"
+// BUG; "keyword.operator.functionlike" doesn't override "keyword.operator"
 // BUG: "storage.type.primitive.cpp" doesn't override "storage"
+// BUG: "variable.other.object.property" doesn't override "variable"
 // BUG: operator"" is semantic "stringLiteral"
 // BUG: Function definitions are semantic "function" which is mapped to "entity.name.function.call"
 // BUG: ... in catch is "meta.parens"

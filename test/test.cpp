@@ -115,6 +115,9 @@ noexcept(0)
 
 struct FooFunctions
 {
+	FooFunctions() = default;
+	FooFunctions(int) {}
+
 	void* operator new(size_t) { return 0; }
 	void* operator new[](size_t) { return 0; }
 	void operator delete(void*) {}
@@ -182,6 +185,11 @@ BarFunctionCalls()
 
 	new FooFunctions;
 	new FooFunctions();
+	new FooFunctions(0);
+	new FooFunctions{};
+	new FooFunctions{0};
+
+	&BarFunctionCalls;
 
 	FooFunctions* pf = nullptr;
 
