@@ -17,9 +17,14 @@
   "contributes": {
     "themes": [
       {
-        "label": "akbyrd-vsc-theme",
+        "label": "akbyrd-vsc-theme-material",
         "uiTheme": "vs-dark",
-        "path": "./themes/vsc-theme-color-theme.json"
+        "path": "./themes/material-color-theme.json"
+      },
+      {
+        "label": "akbyrd-vsc-theme-blank",
+        "uiTheme": "vs-dark",
+        "path": "./themes/blank-color-theme.json"
       }
     ]
   }

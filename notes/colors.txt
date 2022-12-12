@@ -16,5 +16,3 @@
 Alternative
 #FF9800 Orange 500       - Types (A200, A400)
 #9E9D24 Lime 800         - Literals
-
-TODO: Should strings, built-ins, and numbers have different colors?

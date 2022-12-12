@@ -1,5 +1,5 @@
 {
-	"name": "akbyrd-vsc-theme",
+	"name": "akbyrd-vsc-theme-material",
 	"colors": {
 		"activityBar.background": "#424242",
 		"activityBar.dropBorder": "#ffffff",
@@ -37,15 +37,15 @@
 		"dropdown.border": "#424242",
 		"dropdown.foreground": "#eeeeee",
 		"editor.background": "#101010",
-		"editor.findMatchBackground": "#f9af983d",
-		"editor.findMatchHighlightBackground": "#f9af983d",
+		"editor.findMatchBackground": "#3f51b500",
+		"editor.findMatchHighlightBackground": "#FF6F0033",
 		"editor.findRangeHighlightBackground": "#21212166",
 		"editor.foreground": "#9e9e9e",
 		"editor.hoverHighlightBackground": "#3f51b540",
-		"editor.inactiveSelectionBackground": "#3f51b5",
+		"editor.inactiveSelectionBackground": "#3f51b522",
 		"editor.lineHighlightBorder": "#212121",
 		"editor.rangeHighlightBackground": "#ffffff0b",
-		"editor.selectionBackground": "#3f51b540",
+		"editor.selectionBackground": "#3f51b555",
 		"editor.snippetFinalTabstopHighlightBorder": "#424242",
 		"editor.snippetTabstopHighlightBackground": "#757575",
 		"editor.symbolHighlightBackground": "#ff572255",
@@ -87,7 +87,7 @@
 		"editorOverviewRuler.warningForeground": "#ffeb3b",
 		"editorPane.background": "#101010",
 		"editorRuler.foreground": "#424242",
-		"editorStickyScroll.background": "#181828cc",
+		"editorStickyScroll.background": "#212121",
 		"editorSuggestWidget.background": "#212121",
 		"editorSuggestWidget.border": "#424242",
 		"editorSuggestWidget.focusHighlightForeground": "#2196f3",
@@ -201,6 +201,7 @@
 		"tab.inactiveForeground": "#ffffff80",
 		"tab.inactiveModifiedBorder": "#03a9f480",
 		"tab.lastPinnedBorder": "#9e9e9e",
+		"tab.unfocusedActiveBackground": "#3c3c3c80",
 		"tab.unfocusedActiveForeground": "#ffffff80",
 		"tab.unfocusedActiveModifiedBorder": "#03a9f480",
 		"tab.unfocusedInactiveBackground": "#212121",
@@ -327,14 +328,3 @@
 		},
 	]
 }
-
-// TODO: See if standard libary coloring works in C++
-
-// BUG: Exclusions aren't supported: "scope - scope.other"
-// BUG: Grouping isn't supported: "scope, other"
-// BUG: C++: can't distinguish throw exception specifier and control flow
-// BUG: C++: can't distinguish overloaded new and non-overloaded new
-// BUG: C++: can't distinguish function definitions and invocations
-// BUG: C++: no token for ellipses in catch(...)
-// BUG: C++: no token for compiler extensions like __restrict
-// BUG: C++: no token for unnamed variadic template parameters

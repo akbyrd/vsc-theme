@@ -1,0 +1,14 @@
+TODO: Lower case hex colors
+TODO: Check list colors
+TODO: Check snippet highlight
+TODO: Should strings, built-ins, and numbers have different colors?
+TODO: See if standard libary coloring works in C++
+
+BUG: Exclusions aren't supported: "scope - scope.other"
+BUG: Grouping isn't supported: "scope, other"
+BUG: C++: can't distinguish throw exception specifier and control flow
+BUG: C++: can't distinguish overloaded new and non-overloaded new
+BUG: C++: can't distinguish function definitions and invocations
+BUG: C++: no token for ellipses in catch(...)
+BUG: C++: no token for compiler extensions like __restrict
+BUG: C++: no token for unnamed variadic template parameters
