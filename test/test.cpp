@@ -47,7 +47,6 @@ struct FooBase
 	virtual void Bar() = 0;
 };
 
-// BUG: Variadic parameters only work if named
 template <typename, class... Us>
 struct alignas(4) FooStruct final : private FooBase
 {
@@ -89,7 +88,6 @@ using E = int;
 
 void BarThrow() throw(int) {};
 
-// BUG: Variadic parameters only work if named
 template <typename, class... Us>
 constexpr inline static int
 BarKeywords(const volatile int* parameter)

@@ -233,9 +233,9 @@
 		},
 		{ // Types
 			"scope": [
-				"entity.name.label.cs",
-				"entity.name.type",
+				"entity.name.label",
 				"entity.name.operator.type",
+				"entity.name.type",
 				"keyword.other.var",
 				"keyword.type",
 				"storage.type.built-in",
@@ -270,7 +270,7 @@
 		},
 		{ // Format Specifiers
 			"scope": "constant.other.placeholder",
-			"settings": { "foreground": "#00BCD4", },
+			"settings": { "foreground": "#F44336", },
 		},
 		{ // Functions
 			"scope": [
@@ -318,48 +318,22 @@
 		},
 		{ // Everything Else
 			"scope": [
-				"entity.name.namespace",
-				"entity.name.scope-resolution",
-				"keyword.operator.arithmetic",
-				"keyword.operator.assignment",
-				"keyword.operator.bitwise",
-				"keyword.operator.comparison",
-				"keyword.operator.conditional",
-				"keyword.operator.decrement",
-				"keyword.operator.increment",
-				"keyword.operator.logical",
-				"keyword.operator.relational",
-				"keyword.operator.ternary",
-				"meta",
-				"punctuation",
+				"source",
 				"storage.modifier.pointer",
 				"storage.modifier.reference",
 			],
 			"settings": { "foreground": "#9E9E9E", },
-		},
-		{ // Find Missing Colors
-			"scope": [
-				"source",
-				"class.defaultLibrary",
-				"type.defaultLibrary",
-				"support.class",
-				"support.type",
-			],
-			"settings": { "foreground": "#FF00FF", },
 		},
 	]
 }
 
 // TODO: See if standard libary coloring works in C++
 
-// BUG: Exclusions aren't supported: "storage" needs to exclude "storage.modifier.pointer" and "storage.modifier.reference"
-// BUG: Can't tell the difference between throw exception specifier and control flow
-// BUG: Can't tell between overloaded new and non-overloaded new
-// BUG: "keyword.other.operator.overload" doesn't override "keyword"
-// BUG; "keyword.operator.functionlike" doesn't override "keyword.operator"
-// BUG: "storage.type.primitive.cpp" doesn't override "storage"
-// BUG: "variable.other.object.property" doesn't override "variable"
-// BUG: operator"" is semantic "stringLiteral"
-// BUG: Function definitions are semantic "function" which is mapped to "entity.name.function.call"
-// BUG: ... in catch is "meta.parens"
-// BUG: Compiler extensions like __restrict are not recognized ("source")
+// BUG: Exclusions aren't supported: "scope - scope.other"
+// BUG: Grouping isn't supported: "scope, other"
+// BUG: C++: can't distinguish throw exception specifier and control flow
+// BUG: C++: can't distinguish overloaded new and non-overloaded new
+// BUG: C++: can't distinguish function definitions and invocations
+// BUG: C++: no token for ellipses in catch(...)
+// BUG: C++: no token for compiler extensions like __restrict
+// BUG: C++: no token for unnamed variadic template parameters

@@ -3,7 +3,7 @@
 #2196F3 Blue 500         - Keywords
 #FFC107 Amber 500        - Literals
 #FF9800 Orange 500       - Escapes
-#00BCD4 Cyan 500         - Formats
+#F44336 Red 500          - Formats
 #4CAF50 Green 500        - Enums
 #607D8B Blue Gray 500    - Labels
 #9E9E9E Gray 500         - Default
