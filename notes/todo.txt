@@ -1,4 +1,3 @@
-TODO: Lower case hex colors
 TODO: Check list colors
 TODO: Check snippet highlight
 TODO: Should strings, built-ins, and numbers have different colors?
