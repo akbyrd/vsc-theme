@@ -318,6 +318,7 @@
 		},
 		{ // Everything Else
 			"scope": [
+				"entity.name.type.namespace",
 				"source",
 				"storage.modifier.pointer",
 				"storage.modifier.reference",
