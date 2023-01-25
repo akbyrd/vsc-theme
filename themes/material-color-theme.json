@@ -259,6 +259,7 @@
 				"keyword.operator.plus.exponent",
 				"punctuation.definition.string",
 				"string",
+				"variable.other.enummember",
 			],
 			"settings": { "foreground": "#ffc107", },
 		},
@@ -306,10 +307,6 @@
 			"scope": "entity.name.function.preprocessor",
 			"settings": { "foreground": "#7e57c2", },
 		},
-		{ // Enum Members
-			"scope": "variable.other.enummember",
-			"settings": { "foreground": "#4caf50", },
-		},
 		{ // Labels
 			"scope": "entity.name.label.cpp",
 			"settings": { "foreground": "#607d8b", },
@@ -317,6 +314,7 @@
 		{ // Everything Else
 			"scope": [
 				"entity.name.type.namespace",
+				"punctuation",
 				"source",
 				"storage.modifier.pointer",
 				"storage.modifier.reference",
