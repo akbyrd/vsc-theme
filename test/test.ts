@@ -59,7 +59,7 @@ function literals()
 	let x1 = undefined;
 	let x2 = null;
 	let x3 = 0 && true && false;
-	let x4 = "string";
+	let x4 = "string %d %i \n\t";
 	let x5 = [];
 }
 
