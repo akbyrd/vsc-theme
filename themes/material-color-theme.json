@@ -321,7 +321,7 @@
 		{ // Variables
 			"scope": [
 				"entity.name.variable",
-				"support.type.property-name",
+				"support.type.property-name", // TODO: cs?
 				"variable",
 			],
 			"settings": { "foreground": "#00bcd4", },
@@ -353,7 +353,6 @@
 		},
 		{ // Everything Else
 			"scope": [
-				"entity.name.type.namespace",
 				"punctuation",
 				"source",
 

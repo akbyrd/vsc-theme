@@ -48,7 +48,7 @@ struct FooBase
 };
 
 template <typename, class... Us>
-struct alignas(4) FooStruct final : private FooBase
+struct alignas(8) FooStruct final : private FooBase
 {
 	FooStruct() = default;
 	FooStruct(FooStruct&&) = delete;
