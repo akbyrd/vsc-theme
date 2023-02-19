@@ -109,6 +109,15 @@ noexcept(0)
 	reinterpret_cast<int*>(ptr);
 	const_cast<int*>(ptr);
 	dynamic_cast<int*>(ptr);
+
+	int* pi;
+	pi = new int;
+	pi = new int();
+	pi = new int(0);
+	pi = new int{};
+	pi = new int{0};
+	delete pi;
+	delete[] pi;
 }
 
 // -------------------------------------------------------------------------------------------------
@@ -119,6 +128,7 @@ struct FooFunctions
 	FooFunctions() = default;
 	FooFunctions(int) {}
 
+	// TODO: operator keyword color
 	void* operator new(size_t) { return 0; }
 	void* operator new[](size_t) { return 0; }
 	void operator delete(void*) {}
@@ -129,6 +139,7 @@ struct FooFunctions
 	void operator*() {}
 	C* operator->() { return 0; }
 	void operator->*(int) {}
+	operator int() { return 0; }
 
 	void operator++() {}
 	void operator++(int) {}
@@ -176,28 +187,27 @@ struct FooFunctions
 	void Bar() {};
 };
 
-void operator""_z(char) {}
+char operator""_z(char) { return 0; }
+char g = 's'_z; // TODO: user defined literal color
 
 void
 BarFunctionCalls()
 {
-	new int;
-	new int();
-
-	new FooFunctions;
-	new FooFunctions();
-	new FooFunctions(0);
-	new FooFunctions{};
-	new FooFunctions{0};
-
 	&BarFunctionCalls;
 
 	FooFunctions* pf = nullptr;
 
+	// TODO: overloaded new/delete color
+	pf = new FooFunctions;
+	pf = new FooFunctions();
+	pf = new FooFunctions(0);
+	pf = new FooFunctions{};
+	pf = new FooFunctions{0};
 	delete pf;
 	delete[] pf;
 
 	FooFunctions f;
+	(int) f; // TODO: overloaded cast color
 	f[0];
 	*f;
 	f->Bar();

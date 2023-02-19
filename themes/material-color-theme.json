@@ -225,45 +225,58 @@
 		"tree.tableColumnsBorder": "#bdbdbd20",
 		"widget.shadow": "#0000005c",
 	},
+	"semanticHighlighting": true,
 	"tokenColors": [
 		{ // Control Flow
 			"scope": [
 				"entity.other.attribute-name.pragma.preprocessor",
 				"keyword.control",
 				"punctuation.definition.directive",
+				"keyword.preprocessor",
+
+				"punctuation.separator.hash.cs",
+
+				"keyword.operator.expression.in.ts",
+				"keyword.operator.expression.of.ts",
 			],
 			"settings": { "foreground": "#e91e63", },
 		},
 		{ // Types
 			"scope": [
-				"entity.name.label",
 				"entity.name.operator.type",
 				"entity.name.type",
-				"keyword.operator.expression.void",
+				"entity.name.label",
 				"keyword.other.var",
 				"keyword.type",
 				"storage.type.built-in",
+				"support.class",
 				"support.type",
 				"variable.language.super",
+
+				"entity.other.inherited-class.ts",
+				"keyword.operator.expression.void.ts",
 			],
 			"settings": { "foreground": "#00897b", },
 		},
 		{ // Other Keywords
 			"scope": [
-				"keyword.control.as",
-				"keyword.control.default",
-				"keyword.control.export",
-				"keyword.control.from",
-				"keyword.control.import",
-				"keyword.control.require",
-				"keyword.operator.expression",
-				"keyword.operator.functionlike",
-				"keyword.operator.new",
-				"keyword.operator.wordlike",
 				"keyword.other",
-				"punctuation.section.attribute",
 				"storage",
-				"support.other.attribute",
+				//"support.other.attribute", // TODO: What's this?
+
+				"keyword.operator.functionlike.cpp",
+				"keyword.operator.wordlike.cpp",
+				"punctuation.section.attribute.begin.cpp",
+				"punctuation.section.attribute.end.cpp",
+
+				"keyword.control.as.ts",
+				"keyword.control.default.ts",
+				"keyword.control.export.ts",
+				"keyword.control.from.ts",
+				"keyword.control.import.ts",
+				"keyword.control.require.ts",
+				"keyword.operator.expression",
+				"keyword.operator.new.ts",
 			],
 			"settings": { "foreground": "#2196f3", },
 		},
@@ -271,11 +284,12 @@
 			"scope": [
 				"constant",
 				"keyword.other.unit",
-				"keyword.operator.minus.exponent",
-				"keyword.operator.plus.exponent",
 				"punctuation.definition.string",
 				"string",
 				"variable.other.enummember",
+
+				"keyword.operator.minus.exponent",
+				"keyword.operator.plus.exponent",
 			],
 			"settings": { "foreground": "#ffc107", },
 		},
@@ -291,16 +305,16 @@
 			"scope": [
 				"entity.name.function",
 				"entity.name.operator",
-				"keyword.other.operator.overload",
 			],
 			"settings": { "foreground": "#64dd17", },
 		},
 		{ // Function Parameters
 			"scope": [
 				"entity.name.other.preprocessor",
-				"punctuation.vararg-ellipses.variable.parameter.preprocessor",
 				"variable.other.macro",
 				"variable.parameter",
+
+				"punctuation.vararg-ellipses.variable.parameter.preprocessor.cpp",
 			],
 			"settings": { "foreground": "#00bcd4", "fontStyle": "italic"},
 		},
@@ -319,12 +333,22 @@
 			],
 			"settings": { "foreground": "#33691e", },
 		},
+		{ // Documentation Tags
+			"scope": [
+				"punctuation.definition.tag",
+				"entity.name.tag",
+			],
+			"settings": { "foreground": "#33691e", "fontStyle": "underline", },
+		},
 		{ // Macros
 			"scope": "entity.name.function.preprocessor",
 			"settings": { "foreground": "#7e57c2", },
 		},
 		{ // Labels
-			"scope": "entity.name.label.cpp",
+			"scope": [
+				"entity.name.label.cpp",
+				"entity.name.label.call.cpp",
+			],
 			"settings": { "foreground": "#607d8b", },
 		},
 		{ // Everything Else
@@ -332,9 +356,11 @@
 				"entity.name.type.namespace",
 				"punctuation",
 				"source",
-				"storage.modifier.pointer",
-				"storage.modifier.reference",
-				"storage.type.function.arrow",
+
+				"storage.modifier.pointer.cpp",
+				"storage.modifier.reference.cpp",
+
+				"storage.type.function.arrow.ts",
 			],
 			"settings": { "foreground": "#9e9e9e", },
 		},
