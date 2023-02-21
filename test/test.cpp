@@ -18,21 +18,14 @@
 void
 BarControlFlow()
 {
-	if (0) {}
-	else {}
+	if (0) {} else {}
+	switch (0) { case 0: default: break; }
 
-	for (;;) {}
-	while (0) {}
-	do { continue; } while (0);
+	for (;;) { break; }
+	while (0) { continue; }
+	do { } while (0);
 
-	switch (0)
-	{
-		case 0: break;
-	}
-
-	try {}
-	catch (...) {}
-	throw false;
+	try {} catch (...) {} throw 0;
 
 	goto ExitLabel;
 	ExitLabel:

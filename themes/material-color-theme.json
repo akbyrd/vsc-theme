@@ -229,11 +229,14 @@
 	"tokenColors": [
 		{ // Control Flow
 			"scope": [
-				"entity.other.attribute-name.pragma.preprocessor",
 				"keyword.control",
-				"punctuation.definition.directive",
 				"keyword.preprocessor",
+				"punctuation.definition.directive",
 
+				"entity.other.attribute-name.pragma.preprocessor.cpp",
+
+				"keyword.other.await.cs",
+				"keyword.other.using.cs",
 				"punctuation.separator.hash.cs",
 
 				"keyword.operator.expression.in.ts",
@@ -245,7 +248,6 @@
 			"scope": [
 				"entity.name.operator.type",
 				"entity.name.type",
-				"entity.name.label",
 				"keyword.other.var",
 				"keyword.type",
 				"storage.type.built-in",
@@ -262,18 +264,19 @@
 			"scope": [
 				"keyword.other",
 				"storage",
-				//"support.other.attribute", // TODO: What's this?
 
 				"keyword.operator.functionlike.cpp",
 				"keyword.operator.wordlike.cpp",
 				"punctuation.section.attribute.begin.cpp",
 				"punctuation.section.attribute.end.cpp",
 
+				"entity.name.type.alias.cs",
+				"keyword.query",
+
 				"keyword.control.as.ts",
 				"keyword.control.default.ts",
 				"keyword.control.export.ts",
 				"keyword.control.from.ts",
-				"keyword.control.import.ts",
 				"keyword.control.require.ts",
 				"keyword.operator.expression",
 				"keyword.operator.new.ts",
@@ -305,6 +308,8 @@
 			"scope": [
 				"entity.name.function",
 				"entity.name.operator",
+
+				"variable.other.property.ts",
 			],
 			"settings": { "foreground": "#64dd17", },
 		},
@@ -321,7 +326,6 @@
 		{ // Variables
 			"scope": [
 				"entity.name.variable",
-				"support.type.property-name", // TODO: cs?
 				"variable",
 			],
 			"settings": { "foreground": "#00bcd4", },
@@ -341,18 +345,21 @@
 			"settings": { "foreground": "#33691e", "fontStyle": "underline", },
 		},
 		{ // Macros
-			"scope": "entity.name.function.preprocessor",
+			"scope": [
+				"entity.name.function.preprocessor",
+				"entity.name.variable.preprocessor",
+			],
 			"settings": { "foreground": "#7e57c2", },
 		},
 		{ // Labels
 			"scope": [
-				"entity.name.label.cpp",
-				"entity.name.label.call.cpp",
+				"entity.name.label",
 			],
 			"settings": { "foreground": "#607d8b", },
 		},
 		{ // Everything Else
 			"scope": [
+				"entity.name.type.namespace",
 				"punctuation",
 				"source",
 

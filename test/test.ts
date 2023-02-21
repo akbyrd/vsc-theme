@@ -69,7 +69,16 @@ function functions()
 	Math.max(0, 0);
 }
 
-export async function controlFlow()
+function comments()
+{
+	// single line comment
+	/* Block Comment */
+
+	/// single line doc comment
+	/** block doc comment */
+}
+
+async function controlFlow()
 {
 	for (let i in []) { i = i; }
 	for (let x of []) { x = x; }
