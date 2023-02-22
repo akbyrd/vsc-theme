@@ -237,6 +237,7 @@ class C3
 		var x = p;
 	}
 
+	/// <summary> doxygen comment </summary>
 	void comments()
 	{
 		// single line comment

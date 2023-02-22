@@ -9,6 +9,7 @@
 
 #include <vector>
 #include <typeinfo>
+#include <xmmintrin.h>
 #pragma comment(lib, "foolib")
 
 #define FUNCTION_MACRO(x, ...) __VA_ARGS__ ## x #x
@@ -92,25 +93,25 @@ noexcept(0)
 	typeid(int);
 	sizeof(int);
 
-	int* ptr;
-	new int;
-	delete ptr;
-	new int[1];
-	delete[] ptr;
-
 	static_cast<int*>(ptr);
 	reinterpret_cast<int*>(ptr);
 	const_cast<int*>(ptr);
 	dynamic_cast<int*>(ptr);
+}
 
-	int* pi;
-	pi = new int;
-	pi = new int();
-	pi = new int(0);
-	pi = new int{};
-	pi = new int{0};
-	delete pi;
-	delete[] pi;
+// -------------------------------------------------------------------------------------------------
+// Types
+void BarTypes()
+{
+	int;
+	std::size_t;
+	__m128;
+
+	// TODO
+	struct Foo {};
+	new Foo;
+	new Foo();
+	new Foo{};
 }
 
 // -------------------------------------------------------------------------------------------------
@@ -188,16 +189,15 @@ BarFunctionCalls()
 {
 	&BarFunctionCalls;
 
-	FooFunctions* pf = nullptr;
+	new int;
+	new int[1];
+	delete (int*) nullptr;
+	delete[] (int*) nullptr;
 
-	// TODO: overloaded new/delete color
-	pf = new FooFunctions;
-	pf = new FooFunctions();
-	pf = new FooFunctions(0);
-	pf = new FooFunctions{};
-	pf = new FooFunctions{0};
-	delete pf;
-	delete[] pf;
+	new FooFunctions;
+	new FooFunctions[1];
+	delete (FooFunctions*) nullptr;
+	delete[] (FooFunctions*) nullptr;
 
 	FooFunctions f;
 	(int) f; // TODO: overloaded cast color
@@ -260,7 +260,9 @@ void BarParameter(int parameter) { int variable = parameter; }
 
 // Comment
 /* Block comment */
-/// Doxygen comment
+/// <summary> Doxygen comment </summary> // TODO
+/** <summary> Doxygen comment </summary> */ // TODO
+
 
 // -------------------------------------------------------------------------------------------------
 

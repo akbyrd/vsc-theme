@@ -226,6 +226,9 @@
 		"widget.shadow": "#0000005c",
 	},
 	"semanticHighlighting": true,
+	"semanticTokenColors": {
+		"newOperator": "#64dd17",
+	},
 	"tokenColors": [
 		{ // Control Flow
 			"scope": [
@@ -270,6 +273,9 @@
 				"punctuation.section.attribute.begin.cpp",
 				"punctuation.section.attribute.end.cpp",
 
+				"entity.name.tag.localname.xml",
+				"entity.name.tag.xml",
+
 				"entity.name.type.alias.cs",
 				"keyword.query",
 
@@ -293,6 +299,8 @@
 
 				"keyword.operator.minus.exponent",
 				"keyword.operator.plus.exponent",
+
+				"text.xml",
 			],
 			"settings": { "foreground": "#ffc107", },
 		},
@@ -327,6 +335,11 @@
 			"scope": [
 				"entity.name.variable",
 				"variable",
+
+				"entity.other.attribute-name.localname.xml",
+				"entity.other.attribute-name.xml",
+
+				"support.type.property-name.json",
 			],
 			"settings": { "foreground": "#00bcd4", },
 		},
@@ -339,8 +352,8 @@
 		},
 		{ // Documentation Tags
 			"scope": [
-				"punctuation.definition.tag",
-				"entity.name.tag",
+				"entity.name.tag.cs",
+				"punctuation.definition.tag.cs",
 			],
 			"settings": { "foreground": "#33691e", "fontStyle": "underline", },
 		},
@@ -365,6 +378,8 @@
 
 				"storage.modifier.pointer.cpp",
 				"storage.modifier.reference.cpp",
+
+				"meta.tag.xml",
 
 				"storage.type.function.arrow.ts",
 			],
