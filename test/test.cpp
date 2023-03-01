@@ -14,6 +14,7 @@
 
 #define FUNCTION_MACRO(x, ...) __VA_ARGS__ ## x #x
 #define DEFINE \
+	__FUNCTION__ __LINE__ \
 	"line"
 
 void
@@ -42,7 +43,7 @@ struct FooBase
 };
 
 template <typename, class... Us>
-struct alignas(8) FooStruct final : private FooBase
+struct alignas(8) FooStruct final : private FooBase // TODO
 {
 	FooStruct() = default;
 	FooStruct(FooStruct&&) = delete;
@@ -62,7 +63,7 @@ struct alignas(8) FooStruct final : private FooBase
 	void Bar2() const {}
 	static void Bar3() {}
 	void Bar4() noexcept(0) {}
-	void Bar5() throw(int) {}
+	void Bar5() throw(int) {} // TODO
 
 	explicit operator int() { return 0; }
 
@@ -71,16 +72,17 @@ private:
 protected:
 };
 
+int Global;
+template <typename> void BarTemplate() {}
+
 static union {};
 enum {};
 enum struct A {};
 enum class B {};
-namespace {}
+namespace N {}
 struct C final : public FooBase {};
 typedef int D;
 using E = int;
-
-void BarThrow() throw(int) {};
 
 template <typename, class... Us>
 constexpr inline static int
@@ -93,14 +95,15 @@ noexcept(0)
 	typeid(int);
 	sizeof(int);
 
-	static_cast<int*>(ptr);
-	reinterpret_cast<int*>(ptr);
-	const_cast<int*>(ptr);
-	dynamic_cast<int*>(ptr);
+	static_cast<int*>(0);
+	reinterpret_cast<int*>(0);
+	const_cast<int*>(0);
+	dynamic_cast<int*>(0);
 }
 
 // -------------------------------------------------------------------------------------------------
 // Types
+
 void BarTypes()
 {
 	int;
@@ -180,6 +183,8 @@ struct FooFunctions
 
 	void Bar() {};
 };
+
+void operator +(A, A) {};
 
 char operator""_z(char) { return 0; }
 char g = 's'_z; // TODO: user defined literal color
@@ -263,8 +268,10 @@ void BarParameter(int parameter) { int variable = parameter; }
 /// <summary> Doxygen comment </summary> // TODO
 /** <summary> Doxygen comment </summary> */ // TODO
 
-
 // -------------------------------------------------------------------------------------------------
+
+template<auto& ReleaseFn> struct TemplateParam {}; // TODO
+template<typename T = int> struct TemplateDefault {}; // TODO
 
 void
 BarVariables()

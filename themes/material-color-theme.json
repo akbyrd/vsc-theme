@@ -323,7 +323,6 @@
 		},
 		{ // Function Parameters
 			"scope": [
-				"entity.name.other.preprocessor",
 				"variable.other.macro",
 				"variable.parameter",
 
@@ -360,6 +359,7 @@
 		{ // Macros
 			"scope": [
 				"entity.name.function.preprocessor",
+				"entity.name.other.preprocessor.macro",
 				"entity.name.variable.preprocessor",
 			],
 			"settings": { "foreground": "#7e57c2", },
