@@ -1,6 +1,3 @@
-// -------------------------------------------------------------------------------------------------
-// Control Flow
-
 #pragma once
 
 #ifndef ONCE
@@ -18,7 +15,7 @@
 	"line"
 
 void
-BarControlFlow()
+control()
 {
 	if (0) {} else {}
 	switch (0) { case 0: default: break; }
@@ -34,24 +31,42 @@ BarControlFlow()
 	return;
 }
 
-// -------------------------------------------------------------------------------------------------
-// Keywords
-
-struct FooBase
-{
-	virtual void Bar() = 0;
-};
+static union {};
+enum {};
+enum struct A {};
+enum class B {};
+namespace N {}
+struct C1 { virtual void Bar() = 0; };
+struct C2 : public C1 {};
+typedef int D;
+using E = int;
 
 template <typename, class... Us>
-struct alignas(8) FooStruct final : private FooBase // TODO
+constexpr inline static int
+keywords(const volatile int* parameter)
+noexcept(0)
 {
-	FooStruct() = default;
-	FooStruct(FooStruct&&) = delete;
+	static_assert(true);
+	alignof(int);
+	decltype(int);
+	typeid(int);
+	sizeof(int);
 
-	using FooBase::FooBase;
-	using FooBase::Bar;
+	static_cast<int*>(0);
+	reinterpret_cast<int*>(0);
+	const_cast<int*>(0);
+	dynamic_cast<int*>(0);
+}
 
-	int x;
+template <typename, class... Us>
+struct alignas(8) C3 final : private C2 // TODO
+{
+	C2() = default;
+	C2(C2&&) = delete;
+
+	using C2::C2;
+	using C2::Bar; // TODO
+
 	mutable int y;
 	volatile int* z;
 	const int w = 0;
@@ -74,60 +89,21 @@ protected:
 
 [[nodiscard]] [[noreturn]] [[deprecated]]
 [[using gnu: unused, fakeattribute]]
-void BarAttribute() {}
+void attribute() {}
 
-int Global;
-template <typename> void BarTemplate() {}
-
-static union {};
-enum {};
-enum struct A {};
-enum class B {};
-namespace N {}
-struct C final : public FooBase {};
-typedef int D;
-using E = int;
-
-template <typename, class... Us>
-constexpr inline static int
-BarKeywords(const volatile int* parameter)
-noexcept(0)
-{
-	static_assert(true);
-	alignof(int);
-	decltype(int);
-	typeid(int);
-	sizeof(int);
-
-	static_cast<int*>(0);
-	reinterpret_cast<int*>(0);
-	const_cast<int*>(0);
-	dynamic_cast<int*>(0);
-}
-
-// -------------------------------------------------------------------------------------------------
-// Types
-
-void BarTypes()
+void types()
 {
 	int;
 	std::size_t;
 	__m128;
-
-	// TODO
-	struct Foo {};
-	new Foo;
-	new Foo();
-	new Foo{};
 }
 
-// -------------------------------------------------------------------------------------------------
-// Functions
+template<typename T = int> struct TemplateDefault {}; // TODO
 
-struct FooFunctions
+struct SOperators
 {
-	FooFunctions() = default;
-	FooFunctions(int) {}
+	SOperators() = default;
+	SOperators(int) {}
 
 	// TODO: operator keyword color
 	void* operator new(size_t) { return 0; }
@@ -138,7 +114,7 @@ struct FooFunctions
 	void operator[](int) {}
 	void operator&() {}
 	void operator*() {}
-	C* operator->() { return 0; }
+	C1* operator->() { return 0; }
 	void operator->*(int) {}
 	operator int() { return 0; }
 
@@ -193,22 +169,24 @@ void operator +(A, A) {};
 char operator""_z(char) { return 0; }
 char g = 's'_z; // TODO: user defined literal color
 
+template <typename> void function_template() {}
+
 void
-BarFunctionCalls()
+functions()
 {
-	&BarFunctionCalls;
+	&functions;
 
 	new int;
 	new int[1];
 	delete (int*) nullptr;
 	delete[] (int*) nullptr;
 
-	new FooFunctions;
-	new FooFunctions[1];
-	delete (FooFunctions*) nullptr;
-	delete[] (FooFunctions*) nullptr;
+	new SOperators;
+	new SOperators[1];
+	delete (SOperators*) nullptr;
+	delete[] (SOperators*) nullptr;
 
-	FooFunctions f;
+	SOperators f;
 	(int) f; // TODO: overloaded cast color
 	f[0];
 	*f;
@@ -259,26 +237,17 @@ BarFunctionCalls()
 	f >>= 0;
 }
 
-// -------------------------------------------------------------------------------------------------
-// Function Parameters
-
-void BarParameter(int parameter) { int variable = parameter; }
-
-// -------------------------------------------------------------------------------------------------
-// Comments
-
-// Comment
-/* Block comment */
-/// <summary> Doxygen comment </summary> // TODO
-/** <summary> Doxygen comment </summary> */ // TODO
-
-// -------------------------------------------------------------------------------------------------
-
-template<auto& ReleaseFn> struct TemplateParam {}; // TODO
-template<typename T = int> struct TemplateDefault {}; // TODO
+int variable_global;
+template<auto& variable_template> struct C4 {}; // TODO
 
 void
-BarVariables()
+variables(int parameter)
+{
+	int x = 0;
+	x = parameter;
+}
+
+void literals()
 {
 	int x = 0;
 	x = 0ull;
@@ -292,62 +261,28 @@ BarVariables()
 
 	char* z = "string" "\n\t" "%u %.2f";
 	char w = '0' + '\0';
-
-	int* px = &x;
-	int& rx = x;
-
 	auto a = nullptr;
-	size_t b = 0;
-
-	x = x | x ^ x & x;
-	x = !x + ~x;
-
-	x = x || x && x;
-	x = x < x || x <= x || x > x || x >= x;
-	x |= 1;
-	x &= 1;
-	x ^= 1;
-
-	x = x + x - x * x / x % x;
-	x += 1;
-	x -= 1;
-	x *= 1;
-	x /= 1;
-	x %= 1;
-
-	x = x << 1 >> 1;
-	x <<= 1;
-	x >>= 1;
-
-	x = x, x;
-
-	FooFunctions* ptr = nullptr;
-	(FooFunctions*) ptr;
 }
 
 void
-BarStructMember()
+enums()
 {
-	FooStruct<int> f = {};
-	f.x = f.x + (&f)->x;
+	enum FooEnum { Value };
+	int x = FooEnum::Value;
 }
+
+// Comment
+/* Block comment */
+/// <summary> Doxygen comment </summary> // TODO
+/** <summary> Doxygen comment </summary> */ // TODO
 
 namespace Space { int member; }
-using namespace Space;
-enum FooEnum { Value };
-
 void
-BarMisc()
+namespaces()
 {
-	BarStructMember();
-	ExitLabel:
+	using namespace Space;
 	int x = Space::member;
-	x = FooEnum::Value;
-}
 
-void
-BarStd()
-{
 	std::vector<int> x;
 }
 
