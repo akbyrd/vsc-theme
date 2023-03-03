@@ -72,6 +72,10 @@ private:
 protected:
 };
 
+[[nodiscard]] [[noreturn]] [[deprecated]]
+[[using gnu: unused, fakeattribute]]
+void BarAttribute() {}
+
 int Global;
 template <typename> void BarTemplate() {}
 

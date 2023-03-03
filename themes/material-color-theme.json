@@ -230,7 +230,8 @@
 		"newOperator": "#64dd17",
 	},
 	"tokenColors": [
-		{ // Control Flow
+		{
+			// Control Flow
 			"scope": [
 				"keyword.control",
 				"keyword.preprocessor",
@@ -247,7 +248,8 @@
 			],
 			"settings": { "foreground": "#e91e63", },
 		},
-		{ // Types
+		{
+			// Types
 			"scope": [
 				"entity.name.operator.type",
 				"entity.name.type",
@@ -263,15 +265,15 @@
 			],
 			"settings": { "foreground": "#00897b", },
 		},
-		{ // Other Keywords
+		{
+			// Other Keywords
 			"scope": [
+				"entity.other.attribute",
 				"keyword.other",
 				"storage",
 
 				"keyword.operator.functionlike.cpp",
 				"keyword.operator.wordlike.cpp",
-				"punctuation.section.attribute.begin.cpp",
-				"punctuation.section.attribute.end.cpp",
 
 				"entity.name.tag.localname.xml",
 				"entity.name.tag.xml",
@@ -289,7 +291,8 @@
 			],
 			"settings": { "foreground": "#2196f3", },
 		},
-		{ // Literals
+		{
+			// Literals
 			"scope": [
 				"constant",
 				"keyword.other.unit",
@@ -304,15 +307,18 @@
 			],
 			"settings": { "foreground": "#ffc107", },
 		},
-		{ // Escape Sequences
+		{
+			// Escape Sequences
 			"scope": "constant.character.escape",
 			"settings": { "foreground": "#ff9800", },
 		},
-		{ // Format Specifiers
+		{
+			// Format Specifiers
 			"scope": "constant.other.placeholder",
 			"settings": { "foreground": "#f44336", },
 		},
-		{ // Functions
+		{
+			// Functions
 			"scope": [
 				"entity.name.function",
 				"entity.name.operator",
@@ -321,7 +327,8 @@
 			],
 			"settings": { "foreground": "#64dd17", },
 		},
-		{ // Function Parameters
+		{
+			// Function Parameters
 			"scope": [
 				"variable.other.macro",
 				"variable.parameter",
@@ -330,7 +337,8 @@
 			],
 			"settings": { "foreground": "#00bcd4", "fontStyle": "italic"},
 		},
-		{ // Variables
+		{
+			// Variables
 			"scope": [
 				"entity.name.variable",
 				"variable",
@@ -342,21 +350,24 @@
 			],
 			"settings": { "foreground": "#00bcd4", },
 		},
-		{ // Comments
+		{
+			// Comments
 			"scope": [
 				"comment",
 				"punctuation.definition.comment",
 			],
 			"settings": { "foreground": "#33691e", },
 		},
-		{ // Documentation Tags
+		{
+			// Documentation Tags
 			"scope": [
 				"entity.name.tag.cs",
 				"punctuation.definition.tag.cs",
 			],
 			"settings": { "foreground": "#33691e", "fontStyle": "underline", },
 		},
-		{ // Macros
+		{
+			// Macros
 			"scope": [
 				"entity.name.function.preprocessor",
 				"entity.name.other.preprocessor.macro",
@@ -364,13 +375,15 @@
 			],
 			"settings": { "foreground": "#7e57c2", },
 		},
-		{ // Labels
+		{
+			// Labels
 			"scope": [
 				"entity.name.label",
 			],
 			"settings": { "foreground": "#607d8b", },
 		},
-		{ // Everything Else
+		{
+			// Everything Else
 			"scope": [
 				"entity.name.type.namespace",
 				"punctuation",
