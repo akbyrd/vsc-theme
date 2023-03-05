@@ -243,8 +243,9 @@ template<auto& variable_template> struct C4 {}; // TODO
 void
 variables(int parameter)
 {
-	int x = 0;
+	int x;
 	x = parameter;
+	struct S { int s; };
 }
 
 void literals()

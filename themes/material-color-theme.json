@@ -312,8 +312,6 @@
 			"scope": [
 				"entity.name.function",
 				"entity.name.operator",
-
-				"variable.other.property.ts",
 			],
 			"settings": { "foreground": "#64dd17", },
 		},
@@ -337,6 +335,8 @@
 				"entity.other.attribute-name.xml",
 
 				"support.type.property-name.json",
+
+				"variable.other.property.ts"
 			],
 			"settings": { "foreground": "#00bcd4", },
 		},

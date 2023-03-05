@@ -20,7 +20,7 @@ function keywords()
 	(x: any): x is any => x;
 	typeof(x1);
 	type T1 = keyof Math;
-	type T2<T> = T extends (infer T) ? T : any;
+	type T2<T> = T extends (infer T) ? T: any;
 	x4 instanceof x4;
 	class Base {}
 	class Foo extends Base
@@ -29,8 +29,8 @@ function keywords()
 		public Bar1(): this { return this };
 		protected Bar2() {}
 		private Bar3() {}
-		static get Bar() { return 0; }
-		static set Bar(x) {}
+		static get Bar() { return 0; } // TODO
+		static set Bar(x) {} // TODO
 	};
 }
 
@@ -90,4 +90,11 @@ async function controlFlow()
 	switch (0) { case 0: break; default: break; }
 	function* G() { yield null; };
 	return;
+}
+
+function variables()
+{
+	type T = { x: number; }
+	const x: T = { x: 0 };
+	x.x = 0;
 }
