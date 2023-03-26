@@ -183,10 +183,13 @@
 		"sideBar.background": "#212121",
 		"sideBar.dropBackground": "#607d8b80",
 		"sideBarSectionHeader.background": "#607d8b33",
-		"statusBar.background": "#2196f3",
-		"statusBar.foreground": "#ffffff",
-		"statusBar.noFolderBackground": "#673ab7",
-		"statusBar.noFolderForeground": "#ffffff",
+		"statusBar.background": "#101010",
+		"statusBar.border": "#424242",
+		"statusBar.debuggingBackground": "#ff6600",
+		"statusBar.debuggingForeground": "#000000",
+		"statusBar.focusBorder": "#007fd4",
+		"statusBar.foreground": "#9e9e9e",
+		"statusBar.noFolderBackground": "#101010",
 		"statusBarItem.activeBackground": "#ffffff2e",
 		"statusBarItem.hoverBackground": "#ffffff1f",
 		"statusBarItem.prominentBackground": "#00000080",
@@ -226,9 +229,6 @@
 		"widget.shadow": "#0000005c",
 	},
 	"semanticHighlighting": true,
-	"semanticTokenColors": {
-		"newOperator": "#64dd17",
-	},
 	"tokenColors": [
 		{
 			// Macros
@@ -312,6 +312,9 @@
 			"scope": [
 				"entity.name.function",
 				"entity.name.operator",
+				"support.function",
+
+				"keyword.operator.new.cpp",
 			],
 			"settings": { "foreground": "#64dd17", },
 		},
@@ -329,6 +332,7 @@
 			// Variables
 			"scope": [
 				"entity.name.variable",
+				"support.variable",
 				"variable",
 
 				"entity.other.attribute-name.localname.xml",
@@ -391,6 +395,8 @@
 
 				"storage.modifier.pointer.cpp",
 				"storage.modifier.reference.cpp",
+
+				"keyword.other.hashtable.begin.powershell",
 
 				"meta.tag.xml",
 

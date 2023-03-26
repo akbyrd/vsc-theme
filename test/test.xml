@@ -9,7 +9,7 @@
 		<MemoryPerActionBytes>0</MemoryPerActionBytes>
 	</ParallelExecutor>
 
-	<Anchor Point='center'/>
+	<Anchor Point="center"/>
 	<OnShow>
 		Thing:Show();
 	</OnShow>
