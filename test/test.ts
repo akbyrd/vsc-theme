@@ -1,5 +1,5 @@
 import * as assert from "assert";
-//import A = require("assert");
+//import A = require("assert"); // TODO
 declare module "module" {}
 namespace Namespace {}
 export default class Class {};
@@ -61,6 +61,11 @@ function literals()
 	let x3 = 0 && true && false;
 	let x4 = "string %d %i \n\t";
 	let x5 = [];
+	let x6 = /(?:) (?=) (?!) (?<=) (?<!) (?<Name>) \1 \k<Name> (x) x|y $1 $` $' $& $<foo>/; // TODO
+	let x7 = /./gmiyu;
+	let x8 = /^ $ \b \B [x-y] [^x] . \d \D \w \W \s \S \v \f \p{} \P{}/;
+	let x9 = /[\b] \t \r \n \0 \c0 \xff \d99 \u0025 $$ \\ \" \( \[/; // TODO
+	let x10 = /x* x*? x+ x+? x? x?? x{n} x{n}? x{n,} x{n,}? x{n,m} x{n,m}?/; // TODO
 }
 
 function functions()

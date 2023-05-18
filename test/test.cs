@@ -1,4 +1,4 @@
-#define Foo2 // TODO
+#define Foo2
 #undef Foo2
 
 //extern alias Foo;
@@ -7,7 +7,7 @@ using System;
 using System.Collections;
 using System.Runtime;
 using System.Runtime.InteropServices;
-using Debug = System.Diagnostics.Debug; // TODO
+using Debug = System.Diagnostics.Debug;
 
 #if false
 #elif false
@@ -237,7 +237,9 @@ class C3
 		var x = p;
 	}
 
-	/// <summary> doxygen comment </summary>
+	/// <summary>foo</summary> // TODO
+	/// <param name="foo">foo</param> // TODO
+	/// <returns>foo</returns>
 	void comments()
 	{
 		// single line comment

@@ -78,7 +78,7 @@ struct alignas(8) C3 final : private C2 // TODO
 	void Bar2() const {}
 	static void Bar3() {}
 	void Bar4() noexcept(0) {}
-	void Bar5() throw(int) {} // TODO
+	void Bar5() throw(int) {}
 
 	explicit operator int() { return 0; }
 
@@ -238,7 +238,7 @@ functions()
 }
 
 int variable_global;
-template<auto& variable_template> struct C4 {}; // TODO
+template<auto& variable_template> struct C4 {};
 
 void
 variables(int parameter)
@@ -273,9 +273,19 @@ enums()
 }
 
 // Comment
+/// Comment
 /* Block comment */
-/// <summary> Doxygen comment </summary> // TODO
-/** <summary> Doxygen comment </summary> */ // TODO
+/** Block comment */
+
+/// @brief foo
+/// @returns foo
+/// @param foo foo
+
+/**
+ * @brief foo
+ * @returns foo
+ * @param foo foo
+*/
 
 namespace Space { int member; }
 void
