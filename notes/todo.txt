@@ -1,6 +1,5 @@
 TODO: Check list colors
 TODO: Check snippet highlight
-TODO: Should strings, built-ins, and numbers have different colors?
 TODO: See if standard libary coloring works in C++
 
 BUG: Exclusions aren't supported: "scope - scope.other"

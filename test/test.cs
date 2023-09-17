@@ -214,6 +214,7 @@ class C3
 
 		try { throw new Exception(); } catch when (true) {} finally {}
 
+		goto Label2; // TODO
 		goto Label;
 		Label:
 		return;
