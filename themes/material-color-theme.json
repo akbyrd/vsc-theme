@@ -12,7 +12,7 @@
 		"banner.background": "#3f51b5",
 		"banner.foreground": "#ffffff",
 		"banner.iconForeground": "#2196f3",
-		"bookmarks.lineBackground": "#1a1a1a",
+		"bookmarks.lineBackground": "#ffffff0b",
 		"breadcrumb.activeSelectionForeground": "#bdbdbd",
 		"breadcrumb.background": "#101010",
 		"breadcrumb.focusForeground": "#bdbdbd",
@@ -46,7 +46,7 @@
 		"editor.inactiveSelectionBackground": "#3f51b522",
 		"editor.lineHighlightBackground": "#090909",
 		"editor.lineHighlightBorder": "#2f2f2f",
-		"editor.rangeHighlightBackground": "#1a1a1a",
+		"editor.rangeHighlightBackground": "#ffffff0b",
 		"editor.rangeHighlightBorder": "#007fd4",
 		"editor.selectionBackground": "#3f51b555",
 		"editor.selectionHighlightBackground": "#00000000",
@@ -69,8 +69,8 @@
 		"editorHoverWidget.background": "#212121",
 		"editorHoverWidget.border": "#424242",
 		"editorHoverWidget.statusBarBackground": "#212121",
-		"editorIndentGuide.activeBackground": "#eeeeee29",
-		"editorIndentGuide.background": "#eeeeee29",
+		"editorIndentGuide.activeBackground1": "#eeeeee29",
+		"editorIndentGuide.background1": "#eeeeee29",
 		"editorInlayHint.background": "#42424233",
 		"editorInlayHint.foreground": "#aaaaaa88",
 		"editorLightBulb.foreground": "#ffc107",
@@ -83,7 +83,7 @@
 		"editorOverviewRuler.commonContentForeground": "#424242",
 		"editorOverviewRuler.currentContentForeground": "#009688",
 		"editorOverviewRuler.errorForeground": "#f44336",
-		"editorOverviewRuler.findMatchForeground": "#ffc1077e",
+		"editorOverviewRuler.findMatchForeground": "#ffc10780",
 		"editorOverviewRuler.incomingContentForeground": "#03a9f4",
 		"editorOverviewRuler.infoForeground": "#2196f3",
 		"editorOverviewRuler.rangeHighlightForeground": "#2196f399",
@@ -147,7 +147,7 @@
 		"merge.incomingContentBackground": "#03a9f480",
 		"merge.incomingHeaderBackground": "#03a9f480",
 		"minimap.errorHighlight": "#f44336",
-		"minimap.findMatchHighlight": "#ffc107",
+		"minimap.findMatchHighlight": "#ffc10780",
 		"minimap.selectionHighlight": "#3f51b5",
 		"minimap.warningHighlight": "#ffeb3b",
 		"minimapSlider.activeBackground": "#bdbdbd66",
@@ -180,8 +180,7 @@
 		"scrollbarSlider.activeBackground": "#bdbdbd66",
 		"scrollbarSlider.background": "#75757566",
 		"scrollbarSlider.hoverBackground": "#757575b3",
-		"searchEditor.findMatchBackground": "#ff5722a8",
-		"searchEditor.findMatchBorder": "#ff5722a8",
+		"searchEditor.findMatchBackground": "#ff6f0033",
 		"sideBar.background": "#212121",
 		"sideBar.dropBackground": "#607d8b80",
 		"sideBarSectionHeader.background": "#607d8b33",
@@ -258,8 +257,6 @@
 				"punctuation.separator.hash.cs",
 
 				"meta.import.ts keyword.control.as.ts",
-				"keyword.control.from.ts",
-				"keyword.control.require.ts",
 				"keyword.operator.expression.in.ts",
 				"keyword.operator.expression.of.ts",
 			],
@@ -353,6 +350,7 @@
 				"support.type.property-name.json",
 
 				"entity.name.label.ts",
+				"meta.object-literal.key.ts",
 			],
 			"settings": { "foreground": "#00bcd4", },
 		},
@@ -368,9 +366,9 @@
 				"keyword.operator.minus.exponent",
 				"keyword.operator.plus.exponent",
 
-				"text.xml",
-
 				"entity.name.variable.enum-member.cs",
+
+				"text.xml",
 			],
 			"settings": { "foreground": "#ffc107", },
 		},
@@ -392,6 +390,8 @@
 			// Format Specifiers
 			"scope": [
 				"constant.other.placeholder",
+
+				"punctuation.definition.interpolation",
 
 				"keyword.operator.or.regexp",
 				"keyword.other.back-reference.regexp",
@@ -434,6 +434,7 @@
 		{
 			// Everything Else
 			"scope": [
+				"entity.name.namespace",
 				"entity.name.type.namespace",
 				"punctuation",
 				"source",
@@ -441,11 +442,15 @@
 				"storage.modifier.pointer.cpp",
 				"storage.modifier.reference.cpp",
 
+				"keyword.other.attribute-specifier.cs",
+
 				"keyword.other.hashtable.begin.powershell",
 
 				"meta.tag.xml",
 
 				"storage.type.function.arrow.ts",
+				"constant.language.import-export-all.ts",
+				"meta.namespace.declaration.ts entity.name.type.module.ts",
 			],
 			"settings": { "foreground": "#9e9e9e", },
 		},

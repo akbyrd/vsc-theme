@@ -1,5 +1,5 @@
 import * as assert from "assert"
-//import A = require("assert") // TODO
+import A = require("assert") // TODO
 declare module "module" {}
 namespace Namespace {}
 export default class Class {}
@@ -21,7 +21,7 @@ function keywords()
 	typeof x1
 	type T1 = keyof Math
 	type T2<T> = T extends (infer T) ? T : any
-	x4 instanceof x4
+	x4 instanceof x4 // Semantic
 	class Base {}
 	class Foo extends Base
 	{
@@ -40,7 +40,7 @@ void function types()
 	let x2: null = null
 	let x3: unknown | never | any | boolean | string | void
 	let x4: number[] = []
-	let x5: Array<number> = new Array<number>()
+	let x5: Array<number> = new Array<number>() // Semantic
 
 	class Class implements Class {}
 
@@ -71,7 +71,13 @@ function literals()
 function functions()
 {
 	let x1 = () => {}
-	Math.max(0, 0)
+	Math.max(0, 0) // Semantic
+}
+
+function parameters(foo: number, funcParam: () => {})
+{
+	foo = foo + 1 // Semantic
+	funcParam()
 }
 
 function comments()

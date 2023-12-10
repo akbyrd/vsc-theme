@@ -7,7 +7,7 @@ using System;
 using System.Collections;
 using System.Runtime;
 using System.Runtime.InteropServices;
-using Debug = System.Diagnostics.Debug;
+using Debug = System.Diagnostics.Debug; // TODO
 
 #if false
 #elif false
@@ -22,7 +22,7 @@ using Debug = System.Diagnostics.Debug;
 #line (1, 1) - (2, 2) "filename"
 #line hidden
 #line default
-#nullable enable
+#nullable enable // TODO
 #pragma warning disable 1
 #pragma warning restore 1
 #pragma checksum "test.cs" "{406EA660-64CF-4C82-B6F0-42D48172A799}" "ab007f1d23d9"
@@ -131,21 +131,22 @@ class C3
 		var x5 = 1e-6;
 		var x6 = true;
 		var x7 = false;
-		var x8 = "string \r\n {0}"; // TODO
-		var x9 = "string"u8;
-		var x10 = 'c';
-		var x11 = null as object;
-		var x12 = E.Null;
-		var x13 = $"{x12}";
-		int[] x14 = { 0 };
-		var x15 = x14[0];
+		var x8 = "string \r\n";
+		var x9 = $"string {x8}";
+		var x10 = string.Format("string {0}", 0); // TODO
+		var x11 = "string"u8; // TODO
+		var x12 = 'c';
+		var x13 = null as object;
+		var x14 = E.Null; // TODO
+		int[] x15 = { 0 };
+		var x16 = x15[0];
 
-		var x16 = +0 + 0 - -0 * 0 / 1;
-		var x17 = !true && true || true;
-		var x18 = ~0 & 0 | 0 ^ 0;
-		var x19 = ++x1 + x1--;
-		var x20 = (0 < 0) == (0 <= 0) != (0 > 0) && (0 >= 0);
-		var x21 = false ? 0 : 0;
+		var x17 = +0 + 0 - -0 * 0 / 1;
+		var x18 = !true && true || true;
+		var x19 = ~0 & 0 | 0 ^ 0;
+		var x20 = ++x1 + x1--;
+		var x21 = (0 < 0) == (0 <= 0) != (0 > 0) && (0 >= 0);
+		var x22 = false ? 0 : 0;
 	}
 
 	void keywords(in int p1, out int p2, ref int p3, params int[] p4)
@@ -222,7 +223,7 @@ class C3
 
 	IEnumerator control2()
 	{
-		if (Random.Shared.Next() < 0)
+		if (Random.Shared.Next() < 0) // TODO
 			yield break;
 		else
 			yield return 0;
@@ -238,7 +239,7 @@ class C3
 		var x = p;
 	}
 
-	/// <summary>foo</summary> // TODO
+	/// <summary>foo</summary>
 	/// <param name="foo">foo</param> // TODO
 	/// <returns>foo</returns>
 	void comments()
