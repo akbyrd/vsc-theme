@@ -458,6 +458,8 @@
 				"storage.type.function.arrow.ts",
 				"constant.language.import-export-all.ts",
 				"meta.namespace.declaration.ts entity.name.type.module.ts",
+
+				"string.other.link.title.markdown",
 			],
 			"settings": { "foreground": "#9e9e9e", },
 		},
