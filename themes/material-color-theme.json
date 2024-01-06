@@ -351,6 +351,10 @@
 
 				"entity.name.label.ts",
 				"meta.object-literal.key.ts",
+
+				"support.type.property-name.toml",
+				"support.type.property-name.array.toml",
+				"support.type.property-name.table.toml",
 			],
 			"settings": { "foreground": "#00bcd4", },
 		},
