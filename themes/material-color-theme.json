@@ -240,6 +240,9 @@
 				"entity.name.function.preprocessor",
 				"entity.name.other.preprocessor.macro",
 				"entity.name.variable.preprocessor",
+
+				"meta.preprocessor.toml",
+				"punctuation.definition.meta.preprocessor.toml",
 			],
 			"settings": { "foreground": "#7e57c2", },
 		},
