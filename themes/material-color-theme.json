@@ -275,6 +275,7 @@
 		{
 			// Keywords
 			"scope": [
+				"entity.name.tag",
 				"entity.other.attribute",
 				"keyword.other",
 				"storage",
@@ -284,9 +285,6 @@
 				"meta.head.function.definition.cpp keyword.control.throw.cpp",
 				"storage.type.template.argument.typename",
 				"storage.type.template.argument.class",
-
-				"entity.name.tag.localname.xml",
-				"entity.name.tag.xml",
 
 				"keyword.query",
 
@@ -342,22 +340,15 @@
 			// Variables
 			"scope": [
 				"entity.name.variable",
+				"entity.other.attribute-name",
+				"support.type.property-name",
 				"support.variable",
 				"variable",
 
 				"storage.type.template.argument",
 
-				"entity.other.attribute-name.localname.xml",
-				"entity.other.attribute-name.xml",
-
-				"support.type.property-name.json",
-
 				"entity.name.label.ts",
 				"meta.object-literal.key.ts",
-
-				"support.type.property-name.toml",
-				"support.type.property-name.array.toml",
-				"support.type.property-name.table.toml",
 			],
 			"settings": { "foreground": "#00bcd4", },
 		},
@@ -368,6 +359,7 @@
 				"keyword.other.unit",
 				"punctuation.definition.string",
 				"string",
+				"support.constant",
 				"variable.other.enummember",
 
 				"keyword.operator.minus.exponent",
@@ -376,6 +368,12 @@
 				"entity.name.variable.enum-member.cs",
 
 				"text.xml",
+
+				"punctuation.definition.entity.html",
+				"punctuation.definition.constant.html",
+				"text.html",
+
+				"punctuation.definition.constant.css",
 			],
 			"settings": { "foreground": "#ffc107", },
 		},
