@@ -376,6 +376,7 @@
 
 				"punctuation.definition.entity.html",
 				"punctuation.definition.constant.html",
+				"string source.css",
 				"text.html",
 
 				"punctuation.definition.constant.css",
