@@ -296,6 +296,11 @@
 
 				"entity.other.attribute-name.pseudo-class.css",
 				"entity.other.attribute-name.pseudo-element.css",
+
+				"fenced_code.block.language.markdown",
+				"text.html.markdown punctuation.definition",
+				"text.html.markdown punctuation.separator.table.markdown",
+				"text.html.markdown markup.heading.setext",
 			],
 			"settings": { "foreground": "#2196f3", },
 		},
@@ -466,8 +471,9 @@
 				"constant.language.import-export-all.ts",
 				"meta.namespace.declaration.ts entity.name.type.module.ts",
 
-				"string.other.link.title.markdown",
 				"text.html.markdown",
+				"text.html.markdown constant.other.reference",
+				"text.html.markdown string.other.link",
 			],
 			"settings": { "foreground": "#9e9e9e", },
 		},
