@@ -354,6 +354,9 @@
 
 				"entity.name.label.ts",
 				"meta.object-literal.key.ts",
+
+				"meta.array.toml",
+				"meta.array.toml string.quoted",
 			],
 			"settings": { "foreground": "#00bcd4", },
 		},

@@ -62,7 +62,7 @@ foo48 = '\b\t\n\f\r\\\u0000\U00000000'
 foo49 = ' "bar" '
 foo50 = ''' 'bar' '''
 foo51 = '''\
-bar'''
+bar''' # BUG (backslack on previous line)
 
 "foo52" = 0 # TODO: Don't color quotes
 'foo53' = 0
