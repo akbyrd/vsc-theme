@@ -75,9 +75,9 @@ foo60.'bar' = 0
 'foo61'.bar = 0
 'foo62.bar' = 0
 
-foo63 = [ 0, 1, ]
+foo63 = [ 0, 1, "baz" ]
 foo64 = [ [ 0, 0, ], [ 1, 1, ], ]
-foo65 = { bar = 0 }
+foo65 = { bar = "baz" }
 foo66 = { bar.baz = 0 }
 foo67 = { "bar" = 0 }
 foo68 = { "bar".baz = 0 }
@@ -85,7 +85,7 @@ foo69 = { bar."baz" = 0 }
 foo70 = { "bar.baz" = 0 }
 
 [foo71]
-bar = 0
+bar = "baz"
 
 [foo72.bar]
 baz = 0
@@ -100,7 +100,7 @@ baz = 0
 baz = 0
 
 [[foo76.bar]]
-baz = 0
+baz = "baz"
 
 [["foo76".bar]]
 baz = 0
