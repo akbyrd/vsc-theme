@@ -298,9 +298,13 @@
 				"entity.other.attribute-name.pseudo-element.css",
 
 				"fenced_code.block.language.markdown",
+				"meta.separator.markdown",
 				"text.html.markdown punctuation.definition",
 				"text.html.markdown punctuation.separator.table.markdown",
 				"text.html.markdown markup.heading.setext",
+
+				"punctuation.line.separator.math.tex",
+				"punctuation.math.operator.latex",
 			],
 			"settings": { "foreground": "#2196f3", },
 		},
@@ -333,6 +337,8 @@
 				"support.function",
 
 				"keyword.operator.new.cpp",
+
+				"punctuation.definition.function.math.tex",
 			],
 			"settings": { "foreground": "#64dd17", },
 		},
@@ -361,6 +367,8 @@
 				"meta.object-literal.key.ts",
 
 				"meta.array.toml",
+
+				"meta.function.math.tex",
 			],
 			"settings": { "foreground": "#00bcd4", },
 		},
@@ -473,6 +481,8 @@
 				"text.html.markdown",
 				"text.html.markdown constant.other.reference",
 				"text.html.markdown string.other.link",
+
+				"meta.function.math.tex punctuation.definition",
 			],
 			"settings": { "foreground": "#9e9e9e", },
 		},
