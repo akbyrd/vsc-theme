@@ -17,3 +17,7 @@ body {
 .breadcrumb li:not(:last-child)::after {
 	content: "»";
 }
+
+.post-list li h2 a:hover {
+	text-decoration: underline;
+}

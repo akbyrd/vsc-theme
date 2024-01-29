@@ -262,6 +262,9 @@
 				"meta.import.ts keyword.control.as.ts",
 				"keyword.operator.expression.in.ts",
 				"keyword.operator.expression.of.ts",
+
+				"source.css entity.other.attribute-name.pseudo-class",
+				"source.css entity.other.attribute-name.pseudo-element",
 			],
 			"settings": { "foreground": "#e91e63", },
 		},
@@ -323,6 +326,8 @@
 				"keyword.operator.expression.void.ts",
 				"meta.import.ts variable.other",
 				"support.variable.ts",
+
+				"source.css entity.other.attribute-name.class",
 			],
 			"settings": { "foreground": "#00897b", },
 		},
