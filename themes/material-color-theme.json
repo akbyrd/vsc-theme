@@ -369,6 +369,8 @@
 
 				"meta.array.toml",
 
+				"text.html entity.other.attribute-name",
+
 				"meta.function.math.tex",
 			],
 			"settings": { "foreground": "#00bcd4", },
