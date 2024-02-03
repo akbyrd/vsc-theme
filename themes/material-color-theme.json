@@ -241,6 +241,8 @@
 				"entity.name.other.preprocessor.macro",
 				"entity.name.variable.preprocessor",
 
+				"source.css keyword.control",
+
 				"meta.preprocessor.toml",
 				"punctuation.definition.meta.preprocessor.toml",
 			],
@@ -263,6 +265,8 @@
 				"keyword.operator.expression.in.ts",
 				"keyword.operator.expression.of.ts",
 
+				"source.css keyword.operator.logical",
+				"source.css entity.name.tag.custom",
 				"source.css entity.other.attribute-name.pseudo-class",
 				"source.css entity.other.attribute-name.pseudo-element",
 			],
@@ -327,7 +331,10 @@
 				"meta.import.ts variable.other",
 				"support.variable.ts",
 
+				"source.css entity.name.function",
 				"source.css entity.other.attribute-name.class",
+				"source.css entity.other.attribute-name.id",
+				"source.css variable.parameter",
 			],
 			"settings": { "foreground": "#00897b", },
 		},
@@ -371,6 +378,8 @@
 
 				"text.html entity.other.attribute-name",
 
+				"source.css entity.other.attribute-name",
+
 				"meta.function.math.tex",
 			],
 			"settings": { "foreground": "#00bcd4", },
@@ -395,9 +404,10 @@
 				"text.html",
 				"text.html string source.css",
 
+				"source.css meta.function variable.parameter",
 				"source.css punctuation.definition.constant",
 			],
-			"settings": { "foreground": "#ffc107", },
+			"settings": { "foreground": "#ffc107", "fontStyle": "" },
 		},
 		{
 			// Escape Sequences
@@ -426,6 +436,8 @@
 				"punctuation.definition.group.no-capture.regexp",
 				"punctuation.definition.group.regexp",
 				"variable.other.regexp",
+
+				"source.css storage.modifier",
 			],
 			"settings": { "foreground": "#f44336", },
 		},
