@@ -273,15 +273,13 @@
 			"scope": [
 				"keyword",
 				"storage",
+				"entity.name.tag",
 				/* cpp */ "entity.other.attribute",
 				/* cpp */ "meta.head.function.definition keyword.control.throw.cpp",
 				/* cs  */ "keyword.control.context",
 				/* cs  */ "variable.other.value.cs",
-				/* css */ "entity.name.tag.css",
-				/* css */ "entity.name.tag.wildcard.css",
 				/* css */ "entity.other.namespace-prefix.css",
 				/* css */ "meta.at-rule entity.other",
-				/* html*/ "entity.name.tag.html",
 				/* md  */ "markup.heading.setext",
 				/* md  */ "meta.separator.markdown",
 				/* md  */ "punctuation.definition.bold.markdown",
@@ -305,8 +303,6 @@
 				/* ts  */ "keyword.control.as.ts",
 				/* ts  */ "keyword.control.default.ts",
 				/* ts  */ "keyword.control.export.ts",
-				/* xml */ "entity.name.tag.localname.xml",
-				/* xml */ "entity.name.tag.xml",
 			],
 			"settings": { "foreground": "#2196f3", },
 		},
@@ -364,21 +360,13 @@
 			// Variables
 			"scope": [
 				"entity.name.variable",
+				"entity.other.attribute-name",
+				"support.type.property-name",
 				"support.variable",
 				"variable",
 				/* cpp */ "storage.type.template.argument.variable_template.cpp",
 				/* cs  */ "variable.language.this.cs",
-				/* css */ "entity.other.attribute-name.css",
-				/* css */ "support.type.property-name.css",
-				/* css */ "support.type.property-name.media.css",
-				/* html*/ "entity.other.attribute-name.html",
-				/* json*/ "support.type.property-name.json",
-				/* toml*/ "support.type.property-name.array.toml",
-				/* toml*/ "support.type.property-name.table.toml",
-				/* toml*/ "support.type.property-name.toml",
 				/* ts  */ "variable.language.this.ts",
-				/* xml */ "entity.other.attribute-name.localname.xml",
-				/* xml */ "entity.other.attribute-name.xml",
 			],
 			"settings": { "foreground": "#00bcd4", },
 		},
@@ -394,8 +382,6 @@
 				/* css */ "meta.function variable.parameter",
 				/* xml */ "meta.embedded.block.xml",
 				/* xml */ "text.xml",
-
-				//"source.css punctuation.definition.constant",
 			],
 			"settings": { "foreground": "#ffc107", "fontStyle": "" },
 		},
@@ -423,8 +409,6 @@
 				/* ts  */ "keyword.other.back-reference.regexp",
 				/* ts  */ "punctuation.definition.group.assertion.regexp",
 				/* ts  */ "punctuation.definition.group.regexp",
-
-				//"source.css storage.modifier",
 			],
 			"settings": { "foreground": "#f44336", },
 		},
@@ -456,6 +440,7 @@
 		{
 			// Everything Else
 			"scope": [
+				// TODO: Try putting punctuation here
 				"keyword.operator.arithmetic",
 				"keyword.operator.arrow",
 				"keyword.operator.assignment",
@@ -469,6 +454,7 @@
 				"keyword.operator.plus",
 				"keyword.operator.relational",
 				"keyword.operator.ternary",
+				"entity.name.tag.namespace",
 				/* cpp */ "keyword.operator.delete.array.bracket.cpp",
 				/* cpp */ "punctuation.definition.directive.cpp",
 				/* cpp */ "storage.modifier.pointer.cpp",
