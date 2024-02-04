@@ -1,0 +1,23 @@
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<Configuration
+	xmlns="https://www.unrealengine.com/BuildConfiguration"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> <!-- TODO -->
+
+	<xsi:foo />
+
+	<!-- comment -->
+	<ParallelExecutor>
+		<bShowPerActionCompilationTimes>true</bShowPerActionCompilationTimes>
+		<ProcessorCountMultiplier>2</ProcessorCountMultiplier>
+		<MaxProcessorCount>30</MaxProcessorCount>
+		<MemoryPerActionBytes>0</MemoryPerActionBytes>
+	</ParallelExecutor>
+
+	<Anchor Point="center"/>
+	<OnShow>
+		Thing:Show();
+	</OnShow>
+
+</Configuration>
+```

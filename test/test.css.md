@@ -1,0 +1,322 @@
+```css
+@charset "utf-8";
+@import url(a.css) layer(one.two) supports(selector(p)) all, print;
+
+/* TODO: properties (for each type?) */
+/* TODO: functions */
+/* TODO: types */
+
+/* values */
+body {
+	color: #222;
+	font-family: sans-serif;
+	line-height: 1.5;
+	margin: 1rem;
+	max-width: 768px;
+}
+
+/* type selectors */
+a { a { a { margin: 0; } } }
+
+a abbr acronym address area article aside audio
+b base bdi bdo big blockquote body br button
+canvas caption center cite code col colgroup
+data datalist dd del details dfn dialog dir div dl dt
+em embed
+fieldset figcaption figure font footer form frame frameset
+h1 h2 h3 h4 h5 h6
+head header hgroup hr html
+i iframe image img input ins
+kbd
+label legend li link
+main map mark marquee menu menuitem meta meter
+nav nobr noembed noframes noscript
+object ol optgroup option output
+p param picture plaintext portal pre progress
+q
+rb rp rt rtc ruby
+s samp script search section select slot small source span strike strong style sub summary sup
+table tbody td template textarea tfoot th thead time title tr track tt
+u ul
+var video
+wbr
+xmp
+{ margin: 0; }
+
+/* classes selectors */
+.a { .a { .a { margin: 0; } } }
+.a .a .a { margin: 0; }
+
+/* id selectors */
+#a { margin: 0; }
+
+/* attribute selectors */
+a[href]
+a[href="x"]
+a[href="x" i]
+a[href="x" I]
+a[href="x" s]
+a[href="x" S]
+a[href~="x"]
+a[href|="x"]
+a[href^="x"]
+a[href$="x"]
+a[href*="x"]
+{ margin: 0; }
+
+/* & nesting selectors */
+a { &:hover { margin: 0; } }
+.a { .b & & & { margin: 0; } }
+
+/* universal selectors */
+*
+|*
+*|*
+ns|*
+{ margin: 0; }
+
+/* selector lists */
+a, a { margin: 0; }
+
+/* TODO: combinators */
+a > a { margin: 0; }
+
+/* pseudo elements */
+/* TODO */ a::content
+/* TODO */ a::shadow
+a::after
+a::backdrop
+a::before
+a::cue
+a::cue-region
+a::file-selector-button
+a::first-letter
+a::first-line
+a::grammar-error
+a::highlight()
+a::marker
+a::part()
+a::placeholder
+a::selection
+a::slotted()
+a::spelling-error
+a::target-text
+a::view-transition
+{ margin: 0; }
+
+/* pseudo classes */
+/* TODO */ :corner-present
+/* TODO */ :decrement
+/* TODO */ :double-button
+/* TODO */ :end
+/* TODO */ :future
+/* TODO */ :has
+/* TODO */ :horizontal
+/* TODO */ :increment
+:active
+:any-link
+:autofill
+:blank
+:buffering
+:checked
+:current
+:default
+:defined
+:dir()
+:disabled
+:empty
+:enabled
+:first
+:first-child
+:first-of-type
+:focus
+:focus-visible
+:focus-within
+:fullscreen
+:future
+:has()
+:host
+:host-context()
+:host()
+:hover
+:in-range
+:indeterminate
+:invalid
+:is()
+:lang()
+:last-child
+:last-of-type
+:left
+:link
+:local-link
+:modal
+:muted
+:not()
+:nth-child()
+:nth-last-child()
+:nth-last-of-type()
+:nth-of-type()
+:only-child
+:only-of-type
+:optional
+:out-of-range
+:past
+:paused
+:picture-in-picture
+:placeholder-shown
+:playing
+:popover-open
+:read-only
+:read-write
+:required
+:right
+:root
+:scope
+:seeking
+:stalled
+:target
+:target-within
+:user-invalid
+:user-valid
+:valid
+:visited
+:volume-locked
+:where()
+{ margin: 0; }
+
+/* @ rules */
+@color-profile --name {
+	src: unset;
+	rendering-intent: unset;
+}
+@container (width > 400px) {}
+@counter-style name {
+	system:           unset;
+	symbols:          unset;
+	additive-symbols: unset, unset;
+	negative:         unset;
+	prefix:           unset;
+	suffix:           unset;
+	range:            unset;
+	pad:              unset;
+	speak-as:         unset;
+	fallback:         unset;
+}
+@document url("") {}
+@font-face {
+	ascent-override:         unset;
+	descent-override:        unset;
+	font-display:            unset;
+	font-family:             unset;
+	font-stretch:            unset;
+	font-style:              unset;
+	font-weight:             unset;
+	font-feature-settings:   unset;
+	font-variation-settings: unset;
+	line-gap-override:       unset;
+	size-adjust:             unset;
+	src:                     unset;
+	unicode-range:           unset;
+}
+@font-feature-values name {
+	@swash             { foo: 0; }
+	@annotation        { foo: 0; }
+	@ornaments         { foo: 0; }
+	@stylistic         { foo: 0; }
+	@styleset          { foo: 0; bar: 0; }
+	@character-variant { foo: 0; bar: 0; }
+}
+@font-palette-values --name {
+	font-family:     unset;
+	base-palette:    unset;
+	override-colors: unset;
+}
+@keyframes name {
+	from { transform: translateX(0%); }
+	to { transform: translateX(0%); }
+	0% { top: 0; left: 0; }
+}
+@layer name1, name2;
+@layer name { a { margin: 0; } }
+@layer { a { margin: 0; } }
+@media all {}
+@media print {}
+@media only screen and not
+	(any-hover: none) and
+	(any-hover: hover) or
+	(any-pointer: none),
+	(any-pointer: coarse),
+	(any-pointer: fine),
+	(aspect-ratio: 1/1),
+	(color),
+	(color-gamut: srgb),
+	(color-index),
+	(device-aspect-ratio: 1/1),
+	(device-height: 0),
+	(device-width: 0),
+	(display-mode: fullscreen),
+	(display-mode: standalone),
+	(display-mode: minimal-ui),
+	(display-mode: browser),
+	(display-mode: window-controls-overlay),
+	(dynamic-range: standard),
+	(dynamic-range: high),
+	(forced-colors: none),
+	(forced-colors: active),
+	(grid: 0),
+	(height: 0),
+	(hover: none),
+	(hover: hover),
+	(inverted-colors: none),
+	(inverted-colors: inverted),
+	(monochrome),
+	(orientation: portrait),
+	(orientation: landscape),
+	(overflow-block: none),
+	(overflow-block: scroll),
+	(overflow-block: optional-paged),
+	(overflow-block: paged),
+	(overflow-inline: none),
+	(overflow-inline: scroll),
+	(pointer: none),
+	(pointer: coarse),
+	(pointer: fine),
+	(prefers-color-scheme: light),
+	(prefers-color-scheme: dark),
+	(prefers-contrast: no-preference),
+	(prefers-contrast: more),
+	(prefers-contrast: less),
+	(prefers-contrast: custom),
+	(prefers-reduced-motion: no-preference),
+	(prefers-reduced-motion: reduce),
+	(resolution: 0),
+	(scan: progressive),
+	(scan: interlace),
+	(scripting: none),
+	(scripting: initial-only),
+	(scripting: enabled),
+	(update: none),
+	(update: fast),
+	(update: slow),
+	(video-dynamic-range: standard),
+	(video-dynamic-range: high),
+	(width: 0) {}
+@namespace name "";
+@page {
+	margin:           unset;
+	page-orientation: unset;
+	size:             unset;
+}
+@page :blank {}
+@page :first {}
+@page :left {}
+@page :right {}
+@property --name {
+	syntax:        unset;
+	inherits:      unset;
+	initial-value: unset;
+}
+@scope {} /* TODO */
+@starting-style {} /* TODO */
+@supports (selector(p)) {}
+```

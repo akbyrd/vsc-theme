@@ -1,6 +1,7 @@
 TODO: Check list colors
 TODO: Check snippet highlight
 TODO: See if standard libary coloring works in C++
+TODO: Try other CSS selectors (child, ...)
 
 BUG: Exclusions aren't supported: "scope - scope.other"
 BUG: Grouping isn't supported: "scope, other"

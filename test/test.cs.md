@@ -1,3 +1,4 @@
+```cs
 #define Foo2
 #undef Foo2
 
@@ -252,3 +253,4 @@ class C3
 		/** block doc comment */
 	}
 }
+```

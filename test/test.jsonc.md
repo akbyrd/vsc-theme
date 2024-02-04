@@ -1,0 +1,10 @@
+```json
+{
+	// comment
+	/* comment */
+	"integer": 0,
+	"string": "string",
+	"array": [ "element" ],
+	"object": { "key": 0 }
+}
+```

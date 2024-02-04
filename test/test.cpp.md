@@ -1,3 +1,4 @@
+```cpp
 #pragma once
 
 #ifndef ONCE
@@ -301,3 +302,4 @@ namespaces()
 int main() {}
 
 #endif
+```

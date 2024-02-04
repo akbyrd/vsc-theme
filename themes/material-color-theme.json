@@ -237,14 +237,10 @@
 		{
 			// Macros
 			"scope": [
-				"entity.name.function.preprocessor",
-				"entity.name.other.preprocessor.macro",
-				"entity.name.variable.preprocessor",
-
-				"source.css keyword.control",
-
-				"meta.preprocessor.toml",
-				"punctuation.definition.meta.preprocessor.toml",
+				/* cpp */ "entity.name.function.preprocessor.cpp",
+				/* cpp */ "meta.preprocessor.macro.cpp entity.name.other.preprocessor.macro",
+				/* cs  */ "entity.name.variable.preprocessor.symbol.cs",
+				/* css */ "keyword.control.at-rule",
 			],
 			"settings": { "foreground": "#7e57c2", },
 		},
@@ -253,22 +249,15 @@
 			"scope": [
 				"keyword.control",
 				"keyword.preprocessor",
-				"punctuation.definition.directive",
-
-				"entity.other.attribute-name.pragma.preprocessor.cpp",
-
-				"keyword.other.await.cs",
-				"keyword.other.using.cs",
-				"punctuation.separator.hash.cs",
-
-				"meta.import.ts keyword.control.as.ts",
-				"keyword.operator.expression.in.ts",
-				"keyword.operator.expression.of.ts",
-
-				"source.css keyword.operator.logical",
-				"source.css entity.name.tag.custom",
-				"source.css entity.other.attribute-name.pseudo-class",
-				"source.css entity.other.attribute-name.pseudo-element",
+				/* cpp */ "entity.other.attribute-name.pragma.preprocessor.cpp",
+				/* css */ "entity.name.tag.custom.css",
+				/* css */ "entity.other.attribute-name.pseudo-class.css",
+				/* css */ "entity.other.attribute-name.pseudo-element.css",
+				/* css */ "meta.at-rule keyword.operator.logical",
+				/* toml*/ "meta.preprocessor.toml",
+				/* ts  */ "keyword.operator.expression.in.ts",
+				/* ts  */ "keyword.operator.expression.of.ts",
+				/* ts  */ "meta.import keyword.control.as.ts",
 			],
 			"settings": { "foreground": "#e91e63", },
 		},
@@ -282,59 +271,68 @@
 		{
 			// Keywords
 			"scope": [
-				"entity.name.tag",
-				"entity.other.attribute",
-				"keyword.other",
+				"keyword",
 				"storage",
-
-				"keyword.operator.functionlike.cpp",
-				"keyword.operator.wordlike.cpp",
-				"meta.head.function.definition.cpp keyword.control.throw.cpp",
-				"storage.type.template.argument.typename",
-				"storage.type.template.argument.class",
-
-				"keyword.query",
-
-				"keyword.control.as.ts",
-				"keyword.control.default.ts",
-				"keyword.control.export.ts",
-				"keyword.operator.expression",
-				"keyword.operator.new.ts",
-
-				"fenced_code.block.language.markdown",
-				"meta.separator.markdown",
-				"text.html.markdown punctuation.definition",
-				"text.html.markdown punctuation.separator.table.markdown",
-				"text.html.markdown markup.heading.setext",
-
-				"source.css entity.other",
-
-				"punctuation.line.separator.math.tex",
-				"punctuation.math.operator.latex",
+				/* cpp */ "entity.other.attribute",
+				/* cpp */ "meta.head.function.definition keyword.control.throw.cpp",
+				/* cs  */ "keyword.control.context",
+				/* cs  */ "variable.other.value.cs",
+				/* css */ "entity.name.tag.css",
+				/* css */ "entity.name.tag.wildcard.css",
+				/* css */ "entity.other.namespace-prefix.css",
+				/* css */ "meta.at-rule entity.other",
+				/* html*/ "entity.name.tag.html",
+				/* md  */ "markup.heading.setext",
+				/* md  */ "meta.separator.markdown",
+				/* md  */ "punctuation.definition.bold.markdown",
+				/* md  */ "punctuation.definition.constant.markdown",
+				/* md  */ "punctuation.definition.heading.markdown",
+				/* md  */ "punctuation.definition.italic.markdown",
+				/* md  */ "punctuation.definition.link.description.begin.markdown",
+				/* md  */ "punctuation.definition.link.description.end.markdown",
+				/* md  */ "punctuation.definition.link.title.begin.markdown",
+				/* md  */ "punctuation.definition.link.title.end.markdown",
+				/* md  */ "punctuation.definition.list.begin.markdown",
+				/* md  */ "punctuation.definition.markdown",
+				/* md  */ "punctuation.definition.metadata.markdown",
+				/* md  */ "punctuation.definition.quote.begin.markdown",
+				/* md  */ "punctuation.definition.raw.markdown",
+				/* md  */ "punctuation.definition.strikethrough.markdown",
+				/* md  */ "punctuation.definition.table.markdown",
+				/* md  */ "punctuation.separator.table.markdown",
+				/* tex */ "punctuation.definition.math.begin.markdown",
+				/* tex */ "punctuation.definition.math.end.markdown",
+				/* ts  */ "keyword.control.as.ts",
+				/* ts  */ "keyword.control.default.ts",
+				/* ts  */ "keyword.control.export.ts",
+				/* xml */ "entity.name.tag.localname.xml",
+				/* xml */ "entity.name.tag.xml",
 			],
 			"settings": { "foreground": "#2196f3", },
 		},
 		{
 			// Types
 			"scope": [
-				"entity.name.operator.type",
 				"entity.name.type",
-				"keyword.other.var",
 				"keyword.type",
-				"storage.type.built-in",
 				"support.class",
 				"support.type",
-				"variable.language.super",
-
-				"entity.other.inherited-class.ts",
-				"keyword.operator.expression.void.ts",
-				"meta.import.ts variable.other",
-				"support.variable.ts",
-
-				"source.css entity.name.function",
-				"source.css entity.other.attribute-name.class",
-				"source.css entity.other.attribute-name.id",
-				"source.css variable.parameter",
+				"storage.type.var",
+				/* cpp */ "entity.name.operator.type.cpp",
+				/* cpp */ "storage.type.built-in.cpp",
+				/* cpp */ "storage.type.built-in.primitive.cpp",
+				/* cs  */ "variable.language.base.cs",
+				/* css */ "entity.name.function.namespace-prefix.css",
+				/* css */ "entity.other.attribute-name.class.css",
+				/* css */ "entity.other.attribute-name.id.css",
+				/* css */ "meta.at-rule variable.parameter",
+				/* ts  */ "entity.other.inherited-class.ts",
+				/* ts  */ "keyword.operator.expression.void.ts",
+				/* ts  */ "meta.import variable.other.readwrite.alias.ts",
+				/* ts  */ "meta.import-equals variable.other.readwrite.alias.ts",
+				/* ts  */ "support.variable.ts",
+				/* ts  */ "variable.language.super.ts",
+				/* ts  */ "variable.language.super.ts",
 			],
 			"settings": { "foreground": "#00897b", },
 		},
@@ -342,22 +340,23 @@
 			// Functions
 			"scope": [
 				"entity.name.function",
-				"entity.name.operator",
 				"support.function",
-
-				"keyword.operator.new.cpp",
-
-				"punctuation.definition.function.math.tex",
+				/* cpp */ "entity.name.operator.cpp",
+				/* cpp */ "entity.name.operator.custom-literal.cpp",
+				/* cpp */ "entity.name.operator.custom-literal.string.cpp",
+				/* cpp */ "keyword.operator.delete.array.cpp",
+				/* cpp */ "keyword.operator.delete.cpp",
+				/* cpp */ "keyword.operator.new.cpp",
+				/* cpp */ "keyword.other.suffix.literal.user-defined.character.cpp",
 			],
 			"settings": { "foreground": "#64dd17", },
 		},
 		{
 			// Function Parameters
 			"scope": [
-				"variable.other.macro",
+				"entity.name.variable.parameter",
 				"variable.parameter",
-
-				"punctuation.vararg-ellipses.variable.parameter.preprocessor.cpp",
+				/* cpp */ "punctuation.vararg-ellipses.variable.parameter.preprocessor.cpp",
 			],
 			"settings": { "foreground": "#00bcd4", "fontStyle": "italic"},
 		},
@@ -365,22 +364,21 @@
 			// Variables
 			"scope": [
 				"entity.name.variable",
-				"support.type.property-name",
 				"support.variable",
 				"variable",
-
-				"storage.type.template.argument",
-
-				"entity.name.label.ts",
-				"meta.object-literal.key.ts",
-
-				"meta.array.toml",
-
-				"text.html entity.other.attribute-name",
-
-				"source.css entity.other.attribute-name",
-
-				"meta.function.math.tex",
+				/* cpp */ "storage.type.template.argument.variable_template.cpp",
+				/* cs  */ "variable.language.this.cs",
+				/* css */ "entity.other.attribute-name.css",
+				/* css */ "support.type.property-name.css",
+				/* css */ "support.type.property-name.media.css",
+				/* html*/ "entity.other.attribute-name.html",
+				/* json*/ "support.type.property-name.json",
+				/* toml*/ "support.type.property-name.array.toml",
+				/* toml*/ "support.type.property-name.table.toml",
+				/* toml*/ "support.type.property-name.toml",
+				/* ts  */ "variable.language.this.ts",
+				/* xml */ "entity.other.attribute-name.localname.xml",
+				/* xml */ "entity.other.attribute-name.xml",
 			],
 			"settings": { "foreground": "#00bcd4", },
 		},
@@ -388,24 +386,16 @@
 			// Literals
 			"scope": [
 				"constant",
-				"keyword.other.unit",
-				"punctuation.definition.string",
 				"string",
 				"support.constant",
+				"keyword.other.unit",
 				"variable.other.enummember",
+				/* cs  */ "entity.name.variable.enum-member.cs",
+				/* css */ "meta.function variable.parameter",
+				/* xml */ "meta.embedded.block.xml",
+				/* xml */ "text.xml",
 
-				"keyword.operator.minus.exponent",
-				"keyword.operator.plus.exponent",
-
-				"entity.name.variable.enum-member.cs",
-
-				"text.xml",
-
-				"text.html",
-				"text.html string source.css",
-
-				"source.css meta.function variable.parameter",
-				"source.css punctuation.definition.constant",
+				//"source.css punctuation.definition.constant",
 			],
 			"settings": { "foreground": "#ffc107", "fontStyle": "" },
 		},
@@ -413,13 +403,13 @@
 			// Escape Sequences
 			"scope": [
 				"constant.character.escape",
-
-				"constant.other.character-class.regexp",
-				"keyword.control.anchor.regexp",
-				"keyword.operator.negation.regexp",
-				"keyword.operator.quantifier.regexp",
-				"punctuation.definition.character-class.regexp",
-				"constant.character.numeric.regexp",
+				/* tex */ "punctuation.line.separator.math.tex",
+				/* ts  */ "constant.character.numeric.regexp",
+				/* ts  */ "constant.other.character-class.regexp",
+				/* ts  */ "keyword.control.anchor.regexp",
+				/* ts  */ "keyword.operator.negation.regexp",
+				/* ts  */ "keyword.operator.quantifier.regexp",
+				/* ts  */ "punctuation.definition.character-class.regexp",
 			],
 			"settings": { "foreground": "#ff9800", },
 		},
@@ -427,17 +417,14 @@
 			// Format Specifiers
 			"scope": [
 				"constant.other.placeholder",
+				/* cs  */ "punctuation.definition.interpolation.begin.cs",
+				/* cs  */ "punctuation.definition.interpolation.end.cs",
+				/* ts  */ "keyword.operator.or.regexp",
+				/* ts  */ "keyword.other.back-reference.regexp",
+				/* ts  */ "punctuation.definition.group.assertion.regexp",
+				/* ts  */ "punctuation.definition.group.regexp",
 
-				"punctuation.definition.interpolation",
-
-				"keyword.operator.or.regexp",
-				"keyword.other.back-reference.regexp",
-				"punctuation.definition.group.assertion.regexp",
-				"punctuation.definition.group.no-capture.regexp",
-				"punctuation.definition.group.regexp",
-				"variable.other.regexp",
-
-				"source.css storage.modifier",
+				//"source.css storage.modifier",
 			],
 			"settings": { "foreground": "#f44336", },
 		},
@@ -445,59 +432,79 @@
 			// Comments
 			"scope": [
 				"comment",
-				"punctuation.definition.comment",
+				"comment meta.tag.cs punctuation"
 			],
 			"settings": { "foreground": "#33691e", }, // TODO: Try 424242
 		},
 		{
 			// Documentation Tags
 			"scope": [
-				"storage.type.class.doxygen.cpp",
-
-				"entity.name.tag.cs",
-				"comment.documentation.name.cs",
-				"punctuation.definition.tag.cs",
-
-				"comment.block.documentation keyword.other.parameter.direction",
+				/* cpp */ "storage.type.class.doxygen.cpp",
+				/* cs  */ "entity.name.tag.localname.cs",
 			],
 			"settings": { "foreground": "#2196f377", "fontStyle": "italic", },
 		},
 		{
 			// Documentation Parameters
 			"scope": [
-				"comment.line.double-slash.documentation variable.parameter",
-				"comment.block.documentation variable.parameter",
+				/* cpp */ "comment.block.documentation variable.parameter.cpp",
+				/* cpp */ "comment.line.double-slash.documentation variable.parameter.cpp",
+				/* cs  */ "comment meta.tag.cs string"
 			],
 			"settings": { "foreground": "#00bcd499", "fontStyle": "italic", },
 		},
 		{
 			// Everything Else
 			"scope": [
-				"entity.name.namespace",
-				"entity.name.type.namespace",
-				"punctuation",
-				"source",
-
-				"storage.modifier.pointer.cpp",
-				"storage.modifier.reference.cpp",
-
-				"keyword.other.attribute-specifier.cs",
-
-				"keyword.other.hashtable.begin.powershell",
-
-				"meta.tag.xml",
-
-				"storage.type.function.arrow.ts",
-				"constant.language.import-export-all.ts",
-				"meta.namespace.declaration.ts entity.name.type.module.ts",
-
-				"text.html.markdown",
-				"text.html.markdown constant.other.reference",
-				"text.html.markdown string.other.link",
-
-				"meta.function.math.tex punctuation.definition",
+				"keyword.operator.arithmetic",
+				"keyword.operator.arrow",
+				"keyword.operator.assignment",
+				"keyword.operator.bitwise",
+				"keyword.operator.comparison",
+				"keyword.operator.conditional",
+				"keyword.operator.decrement",
+				"keyword.operator.increment",
+				"keyword.operator.logical",
+				"keyword.operator.minus",
+				"keyword.operator.plus",
+				"keyword.operator.relational",
+				"keyword.operator.ternary",
+				/* cpp */ "keyword.operator.delete.array.bracket.cpp",
+				/* cpp */ "punctuation.definition.directive.cpp",
+				/* cpp */ "storage.modifier.pointer.cpp",
+				/* cpp */ "storage.modifier.reference.cpp",
+				/* cs  */ "entity.name.type.namespace.cs",
+				/* cs  */ "keyword.other.attribute-specifier.cs",
+				/* css */ "keyword.operator.combinator.css",
+				/* css */ "keyword.operator.pattern.css",
+				/* css */ "punctuation.definition.entity.css",
+				/* css */ "punctuation.definition.keyword.css",
+				/* json*/ "support.type.property-name.json punctuation",
+				/* md  */ "constant.other.reference.link.markdown",
+				/* md  */ "string.other.link.description.markdown",
+				/* md  */ "string.other.link.title.markdown",
+				/* md  */ "string.other.reference.link.markdown",
+				/* ps1 */ "keyword.operator.other.powershell",
+				/* ps1 */ "punctuation.definition.variable.powershell",
+				/* tex */ "punctuation.definition.function.math.tex",
+				/* ts  */ "entity.name.type.module.ts",
+				/* ts  */ "keyword.generator.asterisk.ts",
+				/* ts  */ "keyword.operator.type.annotation.ts",
+				/* ts  */ "keyword.operator.type.ts",
+				/* ts  */ "storage.type.function.arrow.ts",
+				/* xml */ "entity.name.tag.xml punctuation",
+				/* xml */ "entity.other.attribute-name.xml punctuation",
+				/* xml */ "meta.tag.preprocessor.xml",
+				/* xml */ "meta.tag.xml",
 			],
 			"settings": { "foreground": "#9e9e9e", },
+		},
+		{
+			// Invalid
+			"scope": [
+				"invalid",
+			],
+			"settings": { "foreground": "#ff0000", },
 		},
 		{
 			// DEBUG

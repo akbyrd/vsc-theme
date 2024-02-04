@@ -1,0 +1,29 @@
+```html
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Categories | akbyrd</title>
+</head>
+
+<body>
+	<header>
+		<h1>akbyrd</h1>
+		<a href="/">Home</a>
+		<a>About</a>
+	</header>
+
+	<main>
+		<h1>Categories</h1>
+	</main>
+
+	<iframe style="width:100%; height:100%;"></iframe>
+</body>
+
+{{ define "main" }}
+{{ end }}
+
+</html>
+```

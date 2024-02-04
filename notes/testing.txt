@@ -1,0 +1,3 @@
+With semantic highlighting
+Without semantic highlighting
+In markdown code block

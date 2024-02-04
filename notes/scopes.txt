@@ -1,0 +1,3 @@
+Semantic highlighting overwrites scopes. The means you count on any scope except the top.
+Embedded code may not start with the usual source.lang or text.lang. For example, json changes from source.json to string.json
+Too inconsistent to always solve for the general case. Focus on the practice specifics of each language.

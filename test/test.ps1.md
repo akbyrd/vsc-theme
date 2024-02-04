@@ -1,3 +1,4 @@
+```ps1
 # Control Flow
 #Requires -RunAsAdministrator # TODO
 foreach ($font in $fonts)
@@ -39,3 +40,4 @@ $true
 
 # Comments
 # foo
+```
