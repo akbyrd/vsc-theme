@@ -271,9 +271,10 @@
 		{
 			// Keywords
 			"scope": [
-				"keyword",
-				"storage",
 				"entity.name.tag",
+				"keyword",
+				"punctuation.definition",
+				"storage",
 				/* cpp */ "entity.other.attribute",
 				/* cpp */ "meta.head.function.definition keyword.control.throw.cpp",
 				/* cs  */ "keyword.control.context",
@@ -311,9 +312,9 @@
 			"scope": [
 				"entity.name.type",
 				"keyword.type",
+				"storage.type.var",
 				"support.class",
 				"support.type",
-				"storage.type.var",
 				/* cpp */ "entity.name.operator.type.cpp",
 				/* cpp */ "storage.type.built-in.cpp",
 				/* cpp */ "storage.type.built-in.primitive.cpp",
@@ -361,6 +362,7 @@
 			"scope": [
 				"entity.name.variable",
 				"entity.other.attribute-name",
+				"support.type.property-name punctuation",
 				"support.type.property-name",
 				"support.variable",
 				"variable",
@@ -374,12 +376,13 @@
 			// Literals
 			"scope": [
 				"constant",
+				"keyword.other.unit",
+				"string punctuation",
 				"string",
 				"support.constant",
-				"keyword.other.unit",
 				"variable.other.enummember",
 				/* cs  */ "entity.name.variable.enum-member.cs",
-				/* css */ "meta.function variable.parameter",
+				/* css */ "meta.at-rule variable.parameter",
 				/* xml */ "meta.embedded.block.xml",
 				/* xml */ "text.xml",
 			],
@@ -415,8 +418,9 @@
 		{
 			// Comments
 			"scope": [
+				"comment meta.tag.cs punctuation",
+				"comment punctuation",
 				"comment",
-				"comment meta.tag.cs punctuation"
 			],
 			"settings": { "foreground": "#33691e", }, // TODO: Try 424242
 		},
@@ -440,7 +444,7 @@
 		{
 			// Everything Else
 			"scope": [
-				// TODO: Try putting punctuation here
+				"entity.name.tag.namespace",
 				"keyword.operator.arithmetic",
 				"keyword.operator.arrow",
 				"keyword.operator.assignment",
@@ -454,32 +458,24 @@
 				"keyword.operator.plus",
 				"keyword.operator.relational",
 				"keyword.operator.ternary",
-				"entity.name.tag.namespace",
+				"punctuation",
 				/* cpp */ "keyword.operator.delete.array.bracket.cpp",
-				/* cpp */ "punctuation.definition.directive.cpp",
 				/* cpp */ "storage.modifier.pointer.cpp",
 				/* cpp */ "storage.modifier.reference.cpp",
 				/* cs  */ "entity.name.type.namespace.cs",
 				/* cs  */ "keyword.other.attribute-specifier.cs",
 				/* css */ "keyword.operator.combinator.css",
 				/* css */ "keyword.operator.pattern.css",
-				/* css */ "punctuation.definition.entity.css",
-				/* css */ "punctuation.definition.keyword.css",
-				/* json*/ "support.type.property-name.json punctuation",
 				/* md  */ "constant.other.reference.link.markdown",
 				/* md  */ "string.other.link.description.markdown",
 				/* md  */ "string.other.link.title.markdown",
 				/* md  */ "string.other.reference.link.markdown",
 				/* ps1 */ "keyword.operator.other.powershell",
-				/* ps1 */ "punctuation.definition.variable.powershell",
-				/* tex */ "punctuation.definition.function.math.tex",
 				/* ts  */ "entity.name.type.module.ts",
 				/* ts  */ "keyword.generator.asterisk.ts",
 				/* ts  */ "keyword.operator.type.annotation.ts",
 				/* ts  */ "keyword.operator.type.ts",
 				/* ts  */ "storage.type.function.arrow.ts",
-				/* xml */ "entity.name.tag.xml punctuation",
-				/* xml */ "entity.other.attribute-name.xml punctuation",
 				/* xml */ "meta.tag.preprocessor.xml",
 				/* xml */ "meta.tag.xml",
 			],
