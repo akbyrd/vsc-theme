@@ -2,6 +2,7 @@
 #Requires -RunAsAdministrator # TODO
 foreach ($font in $fonts)
 exit
+$false ? $false : $true # BUG
 
 # Keywords
 $local:foo

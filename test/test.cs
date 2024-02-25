@@ -215,6 +215,8 @@ class C3
 		do {} while (false);
 
 		try { throw new Exception(); } catch when (true) {} finally {}
+		0 ? 0 : 1;
+		0 ? false : true; // BUG
 
 		goto Label2;
 		goto Label;

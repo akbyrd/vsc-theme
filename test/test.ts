@@ -100,6 +100,7 @@ async function controlFlow()
 	if (false) {} else {}
 	switch (0) { case 0: break; default: break }
 	function* G() { yield null }
+	false ? false : true;
 	return
 }
 

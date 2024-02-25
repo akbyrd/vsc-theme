@@ -25,6 +25,7 @@ control()
 	do { } while (0);
 
 	try {} catch (...) {} throw 0;
+	0 ? false : true;
 
 	goto ExitLabel;
 	ExitLabel:
