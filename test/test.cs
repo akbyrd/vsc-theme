@@ -118,6 +118,7 @@ class C3
 		object  x17;
 		dynamic x18;
 		var     x19 = 0;
+		int?    x20; // TODO
 
 		System.Int128 x20;
 	}
@@ -217,6 +218,11 @@ class C3
 		try { throw new Exception(); } catch when (true) {} finally {}
 		0 ? 0 : 1;
 		0 ? false : true; // BUG
+		0 ?? 1;
+		x ??= null; // TODO
+		null!;
+		null?.GetType()
+		null!.GetType()
 
 		goto Label2;
 		goto Label;

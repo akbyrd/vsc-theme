@@ -40,3 +40,5 @@ $true
 
 # Comments
 # foo
+
+if (!$match) {}

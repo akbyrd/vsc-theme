@@ -101,6 +101,7 @@ async function controlFlow()
 	switch (0) { case 0: break; default: break }
 	function* G() { yield null }
 	false ? false : true;
+	false ?? true; // TODO
 	return
 }
 
@@ -109,4 +110,5 @@ function variables()
 	type T = { x: number }
 	const x: T = { x: 0 }
 	x.x = 0
+	document.readyState
 }

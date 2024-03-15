@@ -250,6 +250,8 @@
 				"keyword.control",
 				"keyword.preprocessor",
 				"keyword.operator.ternary",
+				"keyword.operator.null-coalescing",
+				"keyword.operator.null-conditional",
 				/* cpp */ "entity.other.attribute-name.pragma.preprocessor.cpp",
 				/* cs  */ "keyword.operator.conditional.colon.cs",
 				/* cs  */ "keyword.operator.conditional.question-mark.cs",
@@ -370,6 +372,7 @@
 				"variable",
 				/* cpp */ "storage.type.template.argument.variable_template.cpp",
 				/* cs  */ "variable.language.this.cs",
+				/* ts  */ "support.constant.property",
 				/* ts  */ "variable.language.this.ts",
 			],
 			"settings": { "foreground": "#00bcd4", },
@@ -422,9 +425,10 @@
 		{
 			// Comments
 			"scope": [
-				"comment meta.tag.cs punctuation",
 				"comment punctuation",
 				"comment",
+				/* cpp */ "comment storage.type.class.gtkdoc.cpp",
+				/* cs  */ "comment meta.tag.cs punctuation",
 			],
 			"settings": { "foreground": "#33691e", }, // TODO: Try 424242
 		},
@@ -432,6 +436,7 @@
 			// Documentation Tags
 			"scope": [
 				/* cpp */ "storage.type.class.doxygen.cpp",
+				/* cpp */ "comment keyword.other.parameter",
 				/* cs  */ "entity.name.tag.localname.cs",
 			],
 			"settings": { "foreground": "#2196f377", "fontStyle": "italic", },
@@ -474,6 +479,7 @@
 				/* md  */ "string.other.link.title.markdown",
 				/* md  */ "string.other.reference.link.markdown",
 				/* ps1 */ "keyword.operator.other.powershell",
+				/* ps1 */ "keyword.operator.unary.powershell",
 				/* ts  */ "entity.name.type.module.ts",
 				/* ts  */ "keyword.generator.asterisk.ts",
 				/* ts  */ "keyword.operator.type.annotation.ts",
