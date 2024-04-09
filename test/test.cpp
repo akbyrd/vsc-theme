@@ -98,6 +98,7 @@ void types()
 	int;
 	std::size_t;
 	__m128;
+	enum Foo : int;
 }
 
 template<typename T = int> struct TemplateDefault {}; // TODO

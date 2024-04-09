@@ -320,6 +320,7 @@
 				"support.class",
 				"support.type",
 				/* cpp */ "entity.name.operator.type.cpp",
+				/* cpp */ "source.cpp storage.type.integral",
 				/* cpp */ "storage.type.built-in.cpp",
 				/* cpp */ "storage.type.built-in.primitive.cpp",
 				/* cs  */ "variable.language.base.cs",
