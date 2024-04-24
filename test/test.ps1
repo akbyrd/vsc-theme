@@ -36,9 +36,16 @@ $true
 "\n \t"
 
 # Format Specifiers
-"{} {0}"
+"{} {0,0} {0:0} {0:0.0} {0,0:0.0}"
 
 # Comments
 # foo
 
 if (!$match) {}
+
+fonttools ` # TODO
+	--unicodes="u0000 `
+		u0001"
+
+@()
+"" -f $null
