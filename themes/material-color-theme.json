@@ -368,6 +368,7 @@
 			"scope": [
 				"entity.name.variable",
 				"entity.other.attribute-name",
+				"string.key",
 				"support.type.property-name punctuation",
 				"support.type.property-name",
 				"support.variable",
