@@ -66,6 +66,7 @@ function literals()
 	let x8 = /^ $ \b \B [x-y] [^x] . \d \D \w \W \s \S \v \f \p{} \P{}/
 	let x9 = /[\b] \t \r \n \0 \c0 \xff \d99 \u0025 $$ \\ \" \( \[/ // TODO
 	let x10 = /x* x*? x+ x+? x? x?? x{n} x{n}? x{n,} x{n,}? x{n,m} x{n,m}?/ // TODO
+	let x11 = `${location.origin.length}`
 }
 
 function functions()
@@ -103,6 +104,12 @@ async function controlFlow()
 	false ? false : true;
 	false ?? true; // TODO
 	return
+}
+
+function punctuation()
+{
+	interface I { x?: number }
+	Math.max(...[0, 1, 2])
 }
 
 function variables()
